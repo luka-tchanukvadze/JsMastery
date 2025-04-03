@@ -45,5 +45,5 @@ console.log("23" / "2");
 let n = "1" + 1;
 n = n - 1;
 
-console.log(2 + 3 + 4 + "4");
+console.log(2 + 3 - "4" + 4 - 2 + "4");
 console.log("23" - 3 + 4 - "4");
