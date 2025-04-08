@@ -73,4 +73,6 @@
 // equality operators
 
 const age = 18;
-if (age === 18) console.log("You just became an adult XD");
+if (age === 18) console.log("You just became an adult XD (strict)");
+
+if (age === 18) console.log("You just became an adult XD (loose)");
