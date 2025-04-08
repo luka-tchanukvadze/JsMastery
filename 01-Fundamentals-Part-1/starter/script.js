@@ -76,3 +76,19 @@ const age = 18;
 if (age === 18) console.log("You just became an adult XD (strict)");
 
 if (age === 18) console.log("You just became an adult XD (loose)");
+
+const favourite = Number(prompt("what's your favourtie number"));
+// const favourite = prompt("what's your favourtie number")
+console.log(favourite);
+console.log(typeof favourite);
+
+// if(favourite == 23) {
+if (favourite === 23) {
+  console.log("Cool");
+} else if (favourite === 7) {
+  console.log("wow");
+} else {
+  console.log("lame, no number");
+}
+
+if (favourite !== 23) console.log("why not 23");
