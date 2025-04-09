@@ -94,3 +94,27 @@
 // if (favourite !== 23) console.log("why not 23");
 
 // Boolean Logic
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//   console.log("sara is able to drive");
+// } else {
+//   console.log("sara is able to drive");
+// }
+
+const isTired = true;
+console.log(hasDriverLicense || hasGoodVision || isTired);
+
+if (shouldDrive && hasGoodVision && !isTired) {
+  console.log("sara is able to drive");
+} else {
+  console.log("sara is able to drive");
+}
