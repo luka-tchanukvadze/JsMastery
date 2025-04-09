@@ -173,6 +173,19 @@
 //     console.log("not a valid  day");
 // }
 
-if (23 > 2) {
-  const aaa = "23 is bigger";
-}
+// if (23 > 2) {
+//   const aaa = "23 is bigger";
+// }
+
+const age = 23;
+age >= 18
+  ? console.log("i like to dring beer")
+  : console.log("i like to dring water");
+
+console.log(
+  `I like o dring ${
+    age >= 18
+      ? console.log("i like to dring beer")
+      : console.log("i like to dring water")
+  }`
+);
