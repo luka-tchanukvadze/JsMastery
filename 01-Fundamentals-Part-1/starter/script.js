@@ -177,15 +177,25 @@
 //   const aaa = "23 is bigger";
 // }
 
-const age = 23;
-age >= 18
-  ? console.log("i like to dring beer")
-  : console.log("i like to dring water");
+// const age = 23;
+// age >= 18
+//   ? console.log("i like to dring beer")
+//   : console.log("i like to dring water");
+
+// console.log(
+//   `I like o dring ${
+//     age >= 18
+//       ? console.log("i like to dring beer")
+//       : console.log("i like to dring water")
+//   }`
+// );
+
+// challenge 4
+
+const bill = 250;
+
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 
 console.log(
-  `I like o dring ${
-    age >= 18
-      ? console.log("i like to dring beer")
-      : console.log("i like to dring water")
-  }`
+  `the bill was ${bill}, the tip was ${tip}, and the toatl valu ${bill + tip}`
 );
