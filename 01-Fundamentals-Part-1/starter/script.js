@@ -153,22 +153,26 @@
 //   console.log("No one wins the trophy");
 // }
 
-const day = "monday";
+// const day = "monday";
 
-switch (
-  day // day === monday
-) {
-  case "monday":
-    console.log("plan course structure");
-    break;
-  case "tuesday":
-    console.log("prepare theory videos");
-    break;
-  case "wednesday":
-  case "thursay":
-    console.log("write code example");
-    break;
+// switch (
+//   day // day === monday
+// ) {
+//   case "monday":
+//     console.log("plan course structure");
+//     break;
+//   case "tuesday":
+//     console.log("prepare theory videos");
+//     break;
+//   case "wednesday":
+//   case "thursay":
+//     console.log("write code example");
+//     break;
 
-  default:
-    console.log("not a valid  day");
+//   default:
+//     console.log("not a valid  day");
+// }
+
+if (23 > 2) {
+  const aaa = "23 is bigger";
 }
