@@ -135,20 +135,40 @@
 
 // Bonus 1
 
-const scoreDolphins = (96 + 112 + 100) / 3;
-const scoreKoalas = (88 + 120 + 110) / 3;
-console.log(scoreDolphins, scoreKoalas);
+// const scoreDolphins = (96 + 112 + 100) / 3;
+// const scoreKoalas = (88 + 120 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas);
 
-if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
-  console.log("Dolphins win the trophy");
-} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
-  console.log("Koalas win the trophy");
-} else if (
-  scoreDolphins === scoreKoalas &&
-  scoreKoalas >= 100 &&
-  scoreDolphins >= 100
+// if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+//   console.log("Dolphins win the trophy");
+// } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+//   console.log("Koalas win the trophy");
+// } else if (
+//   scoreDolphins === scoreKoalas &&
+//   scoreKoalas >= 100 &&
+//   scoreDolphins >= 100
+// ) {
+//   console.log("Both win the trophy");
+// } else {
+//   console.log("No one wins the trophy");
+// }
+
+const day = "monday";
+
+switch (
+  day // day === monday
 ) {
-  console.log("Both win the trophy");
-} else {
-  console.log("No one wins the trophy");
+  case "monday":
+    console.log("plan course structure");
+    break;
+  case "tuesday":
+    console.log("prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursay":
+    console.log("write code example");
+    break;
+
+  default:
+    console.log("not a valid  day");
 }
