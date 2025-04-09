@@ -95,26 +95,60 @@
 
 // Boolean Logic
 
-const hasDriverLicense = true;
-const hasGoodVision = true;
+// const hasDriverLicense = true;
+// const hasGoodVision = true;
 
-console.log(hasDriverLicense && hasGoodVision);
-console.log(hasDriverLicense || hasGoodVision);
-console.log(!hasDriverLicense);
+// console.log(hasDriverLicense && hasGoodVision);
+// console.log(hasDriverLicense || hasGoodVision);
+// console.log(!hasDriverLicense);
 
-const shouldDrive = hasDriversLicense && hasGoodVision;
+// const shouldDrive = hasDriversLicense && hasGoodVision;
 
-// if (shouldDrive) {
+// // if (shouldDrive) {
+// //   console.log("sara is able to drive");
+// // } else {
+// //   console.log("sara is able to drive");
+// // }
+
+// const isTired = true;
+// console.log(hasDriverLicense || hasGoodVision || isTired);
+
+// if (shouldDrive && hasGoodVision && !isTired) {
 //   console.log("sara is able to drive");
 // } else {
 //   console.log("sara is able to drive");
 // }
 
-const isTired = true;
-console.log(hasDriverLicense || hasGoodVision || isTired);
+// Challenge 3
 
-if (shouldDrive && hasGoodVision && !isTired) {
-  console.log("sara is able to drive");
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas);
+
+// if (scoreDolphins > scoreKoalas) {
+//   console.log("Dolphins win the trophy");
+// } else if (scoreKoalas > scoreDolphins) {
+//   console.log("Koalas win the trophy");
+// } else if (scoreDolphins === scoreKoalas) {
+//   console.log("Both win the trophy");
+// }
+
+// Bonus 1
+
+const scoreDolphins = (96 + 112 + 100) / 3;
+const scoreKoalas = (88 + 120 + 110) / 3;
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+  console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+  console.log("Koalas win the trophy");
+} else if (
+  scoreDolphins === scoreKoalas &&
+  scoreKoalas >= 100 &&
+  scoreDolphins >= 100
+) {
+  console.log("Both win the trophy");
 } else {
-  console.log("sara is able to drive");
+  console.log("No one wins the trophy");
 }
