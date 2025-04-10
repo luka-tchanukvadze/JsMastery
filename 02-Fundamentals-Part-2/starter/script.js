@@ -12,20 +12,34 @@
 
 //////////////////////////////// functions
 
-function logger() {
-  console.log("Something");
+// function logger() {
+//   console.log("Something");
+// }
+
+// // calling / running / involing function
+// logger();
+// logger();
+
+// function fruitProcessor(apples, oranges) {
+//   // parameters
+//   console.log(apples, oranges);
+//   const juice = `juice with ${apples} apples and ${oranges} oranges`;
+//   return juice;
+// }
+
+// const appleJuice = fruitProcessor(5, 6); // arguments
+// console.log(appleJuice);
+
+///////////////////////// function declaration vs expression
+const age1 = calcAge1(192);
+
+function calcAge1(birthYear) {
+  return 2045 - birthYear;
 }
 
-// calling / running / involing function
-logger();
-logger();
+console.log(age1);
 
-function fruitProcessor(apples, oranges) {
-  // parameters
-  console.log(apples, oranges);
-  const juice = `juice with ${apples} apples and ${oranges} oranges`;
-  return juice;
-}
-
-const appleJuice = fruitProcessor(5, 6); // arguments
-console.log(appleJuice);
+const calcAge2 = function (birthYear) {
+  return 2045 - birthYear;
+};
+console.log(calcAge2(242));
