@@ -31,15 +31,29 @@
 // console.log(appleJuice);
 
 ///////////////////////// function declaration vs expression
-const age1 = calcAge1(192);
+// const age1 = calcAge1(192);
 
-function calcAge1(birthYear) {
-  return 2045 - birthYear;
-}
+// function calcAge1(birthYear) {
+//   return 2045 - birthYear;
+// }
 
-console.log(age1);
+// console.log(age1);
 
-const calcAge2 = function (birthYear) {
-  return 2045 - birthYear;
+// const calcAge2 = function (birthYear) {
+//   return 2045 - birthYear;
+// };
+// console.log(calcAge2(242));
+
+/////////////////////////////// arrow funcitons
+
+const arrow = () => {
+  console.log("hey");
 };
-console.log(calcAge2(242));
+
+const yearsUnitRetirement = (birthyear) => {
+  const age = 2035 - birthyear;
+  const retirement = 65 - age;
+  return retirement;
+};
+
+console.log(yearsUnitRetirement(1002));
