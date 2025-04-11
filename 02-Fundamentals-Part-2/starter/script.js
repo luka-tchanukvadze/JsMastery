@@ -46,14 +46,30 @@
 
 /////////////////////////////// arrow funcitons
 
-const arrow = () => {
-  console.log("hey");
-};
+// const arrow = () => {
+//   console.log("hey");
+// };
 
-const yearsUnitRetirement = (birthyear) => {
-  const age = 2035 - birthyear;
-  const retirement = 65 - age;
-  return retirement;
-};
+// const yearsUnitRetirement = (birthyear) => {
+//   const age = 2035 - birthyear;
+//   const retirement = 65 - age;
+//   return retirement;
+// };
 
-console.log(yearsUnitRetirement(1002));
+// console.log(yearsUnitRetirement(1002));
+
+///////////////////////////////////// functions calling other functions
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pices of apple and ${orangePieces} pieces of orange`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
