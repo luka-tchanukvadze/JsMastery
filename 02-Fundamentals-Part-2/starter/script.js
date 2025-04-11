@@ -60,16 +60,35 @@
 
 ///////////////////////////////////// functions calling other functions
 
-function cutFruitPieces(fruit) {
-  return fruit * 4;
-}
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
 
-function fruitProcessor(apples, oranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges);
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
 
-  const juice = `Juice with ${applePieces} pices of apple and ${orangePieces} pieces of orange`;
-  return juice;
-}
+//   const juice = `Juice with ${applePieces} pices of apple and ${orangePieces} pieces of orange`;
+//   return juice;
+// }
 
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
+
+///////////////////// challenge 1
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+const scoreDolphins = calcAverage(34, 53, 23);
+const scoreKoalas = calcAverage(43, 35, 22);
+
+const checkWinner = function (avgD, avgK) {
+  if (avgD >= avgK * 2) {
+    console.log("dolphins win");
+  } else if (avgK >= avgD * 2) {
+    console.log("Koalas win");
+  } else {
+    console.log("no one wins");
+  }
+};
+
+checkWinner(scoreDolphins, scoreKoalas);
