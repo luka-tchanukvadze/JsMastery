@@ -93,15 +93,27 @@
 
 // checkWinner(scoreDolphins, scoreKoalas);
 
-const friends = ["luka", "chanu"];
+// const friends = ["luka", "chanu"];
 
-const years = new Array(1442, 231, 4235);
+// const years = new Array(1442, 231, 4235);
 
-// it's too basic, i will just watch it
+// // it's too basic, i will just watch it
 
-friends.push("tchanu");
-const newLength = friends.push("whaat");
+// friends.push("tchanu");
+// const newLength = friends.push("whaat");
 
-if (friends.includes("aa")) {
-  console.log("naah");
-}
+// if (friends.includes("aa")) {
+//   console.log("naah");
+// }
+
+//////////////////challenge 2
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [434, 432, 53];
+const tips = calcTip(bills[0], bills[1], bills[2]);
+console.log(bills, tips);
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
