@@ -98,3 +98,10 @@ const friends = ["luka", "chanu"];
 const years = new Array(1442, 231, 4235);
 
 // it's too basic, i will just watch it
+
+friends.push("tchanu");
+const newLength = friends.push("whaat");
+
+if (friends.includes("aa")) {
+  console.log("naah");
+}
