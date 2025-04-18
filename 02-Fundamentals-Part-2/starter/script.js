@@ -130,3 +130,6 @@ const chanu = {
 console.log(chanu);
 console.log(chanu.lastane);
 console.log(chanu["lastane"]);
+
+const nameKey = "Name";
+console.log(chanu["first" + nameKey]);
