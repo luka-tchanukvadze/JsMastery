@@ -120,6 +120,7 @@
 
 /////////////////////////objects
 
+// object literal
 const jonas = {
   firstName: "Luka",
   lastane: "Chanu",
