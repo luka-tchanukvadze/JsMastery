@@ -138,3 +138,9 @@ const interesstedIn = prompt(
   "what do you want to know about me? choose between firstName, lastName, age"
 );
 console.log(chanu[interesstedIn]);
+
+if (chanu[interesstedIn]) {
+  console.log(chanu[interesstedIn]);
+} else {
+  console.log("wrong request");
+}
