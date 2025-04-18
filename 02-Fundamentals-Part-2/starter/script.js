@@ -133,3 +133,8 @@ console.log(chanu["lastane"]);
 
 const nameKey = "Name";
 console.log(chanu["first" + nameKey]);
+
+const interesstedIn = prompt(
+  "what do you want to know about me? choose between firstName, lastName, age"
+);
+console.log(chanu[interesstedIn]);
