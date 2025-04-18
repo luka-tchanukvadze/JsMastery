@@ -121,8 +121,12 @@
 /////////////////////////objects
 
 // object literal
-const jonas = {
+const chanu = {
   firstName: "Luka",
   lastane: "Chanu",
   age: "immortal",
 };
+
+console.log(chanu);
+console.log(chanu.lastane);
+console.log(chanu["lastane"]);
