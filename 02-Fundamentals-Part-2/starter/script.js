@@ -144,3 +144,7 @@ if (chanu[interesstedIn]) {
 } else {
   console.log("wrong request");
 }
+
+chanu.location = "Georgia";
+chanu["twitter"] = "N/A";
+console.log(chanu);
