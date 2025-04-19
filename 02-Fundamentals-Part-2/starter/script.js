@@ -121,30 +121,50 @@
 /////////////////////////objects
 
 // object literal
+// const chanu = {
+//   firstName: "Luka",
+//   lastane: "Chanu",
+//   age: "immortal",
+// };
+
+// console.log(chanu);
+// console.log(chanu.lastane);
+// console.log(chanu["lastane"]);
+
+// const nameKey = "Name";
+// console.log(chanu["first" + nameKey]);
+
+// const interesstedIn = prompt(
+//   "what do you want to know about me? choose between firstName, lastName, age"
+// );
+// console.log(chanu[interesstedIn]);
+
+// if (chanu[interesstedIn]) {
+//   console.log(chanu[interesstedIn]);
+// } else {
+//   console.log("wrong request");
+// }
+
+// chanu.location = "Georgia";
+// chanu["twitter"] = "N/A";
+// console.log(chanu);
+
 const chanu = {
   firstName: "Luka",
   lastane: "Chanu",
+  birthYear: 2003,
   age: "immortal",
+  friends: ["luka", "chanu"],
+  hasDriversLicense: true,
+
+  calcAge: function (birthYear) {
+    return 2034 - birthYear;
+  },
+
+  calcAge: function (birthYear) {
+    return 2034 - birthYear;
+  },
 };
 
-console.log(chanu);
-console.log(chanu.lastane);
-console.log(chanu["lastane"]);
-
-const nameKey = "Name";
-console.log(chanu["first" + nameKey]);
-
-const interesstedIn = prompt(
-  "what do you want to know about me? choose between firstName, lastName, age"
-);
-console.log(chanu[interesstedIn]);
-
-if (chanu[interesstedIn]) {
-  console.log(chanu[interesstedIn]);
-} else {
-  console.log("wrong request");
-}
-
-chanu.location = "Georgia";
-chanu["twitter"] = "N/A";
-console.log(chanu);
+// console.log(chanu["calcAge"](1882));
+console.log(chanu["calcAge"]);
