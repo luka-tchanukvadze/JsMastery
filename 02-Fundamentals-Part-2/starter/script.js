@@ -169,6 +169,10 @@ const chanu = {
     this.age = 2034 - this.birthYear;
     return this.age;
   },
+
+  getSummary: function () {
+    return `${this.firstName} is  a ${this.calcAge()} year old `;
+  },
 };
 
 // console.log(chanu["calcAge"](1882));
@@ -177,3 +181,5 @@ const chanu = {
 console.log(chanu.age);
 console.log(chanu.age);
 console.log(chanu.age);
+
+console.log(chanu.getSummary());
