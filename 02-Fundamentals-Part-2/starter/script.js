@@ -167,4 +167,6 @@ const chanu = {
 };
 
 // console.log(chanu["calcAge"](1882));
-console.log(chanu["calcAge"]);
+// console.log(chanu["calcAge"]);
+
+console.log(chanu.calcAge());
