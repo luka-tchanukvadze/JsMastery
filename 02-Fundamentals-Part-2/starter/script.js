@@ -161,12 +161,19 @@ const chanu = {
   //   return 2034 - birthYear;
   // },
 
+  // calcAge: function () {
+  //   return 2034 - this.birthYear;
+  // },
+
   calcAge: function () {
-    return 2034 - this.birthYear;
+    this.age = 2034 - this.birthYear;
+    return this.age;
   },
 };
 
 // console.log(chanu["calcAge"](1882));
 // console.log(chanu["calcAge"]);
 
-console.log(chanu.calcAge());
+console.log(chanu.age);
+console.log(chanu.age);
+console.log(chanu.age);
