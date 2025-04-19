@@ -157,12 +157,12 @@ const chanu = {
   friends: ["luka", "chanu"],
   hasDriversLicense: true,
 
-  calcAge: function (birthYear) {
-    return 2034 - birthYear;
-  },
+  // calcAge: function (birthYear) {
+  //   return 2034 - birthYear;
+  // },
 
-  calcAge: function (birthYear) {
-    return 2034 - birthYear;
+  calcAge: function () {
+    return 2034 - this.birthYear;
   },
 };
 
