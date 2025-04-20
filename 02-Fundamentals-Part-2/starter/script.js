@@ -149,37 +149,37 @@
 // chanu["twitter"] = "N/A";
 // console.log(chanu);
 
-const chanu = {
-  firstName: "Luka",
-  lastane: "Chanu",
-  birthYear: 2003,
-  age: "immortal",
-  friends: ["luka", "chanu"],
-  hasDriversLicense: true,
+// const chanu = {
+//   firstName: "Luka",
+//   lastane: "Chanu",
+//   birthYear: 2003,
+//   age: "immortal",
+//   friends: ["luka", "chanu"],
+//   hasDriversLicense: true,
 
-  // calcAge: function (birthYear) {
-  //   return 2034 - birthYear;
-  // },
+//   // calcAge: function (birthYear) {
+//   //   return 2034 - birthYear;
+//   // },
 
-  // calcAge: function () {
-  //   return 2034 - this.birthYear;
-  // },
+//   // calcAge: function () {
+//   //   return 2034 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2034 - this.birthYear;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2034 - this.birthYear;
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} is  a ${this.calcAge()} year old `;
-  },
-};
+//   getSummary: function () {
+//     return `${this.firstName} is  a ${this.calcAge()} year old `;
+//   },
+// };
 
-// console.log(chanu["calcAge"](1882));
-// console.log(chanu["calcAge"]);
+// // console.log(chanu["calcAge"](1882));
+// // console.log(chanu["calcAge"]);
 
-console.log(chanu.age);
-console.log(chanu.age);
-console.log(chanu.age);
+// console.log(chanu.age);
+// console.log(chanu.age);
+// console.log(chanu.age);
 
-console.log(chanu.getSummary());
+// console.log(chanu.getSummary());
