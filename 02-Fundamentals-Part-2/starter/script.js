@@ -183,3 +183,11 @@
 // console.log(chanu.age);
 
 // console.log(chanu.getSummary());
+
+// i am too buesy today so i will do somthing small
+
+const myList = [1, 2, 3, 4, 5];
+
+const myMap = myList.map((el) => console.log(`<h1>${el}</h1>`));
+
+console.log(myMap);
