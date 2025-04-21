@@ -190,4 +190,7 @@ const myList = [1, 2, 3, 4, 5];
 
 const myMap = myList.map((el) => console.log(`<h1>${el}</h1>`));
 
-console.log(myMap);
+// console.log(myMap);
+
+const myFilter = myList.filter((el) => el % 2 === 0);
+console.log(myFilter);
