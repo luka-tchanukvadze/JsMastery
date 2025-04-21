@@ -194,3 +194,9 @@ const myMap = myList.map((el) => console.log(`<h1>${el}</h1>`));
 
 const myFilter = myList.filter((el) => el % 2 === 0);
 console.log(myFilter);
+
+const myReduce = myList.reduce(
+  (accumulator, currectValue) => accumulator + currectValue,
+  0
+);
+console.log(myReduce);
