@@ -200,3 +200,5 @@ const myReduce = myList.reduce(
   0
 );
 console.log(myReduce);
+
+const myForEach = myList.forEach((el) => console.log(`<h1>${el ** 5}</h1>`));
