@@ -260,12 +260,12 @@ const myArray = ["chanu", 122, "luka", "star wars"];
 const types = [];
 
 for (let i = 0; i < myArray.length; i++) {
-  console.log(`${myArray[i]}, ${typeof myArray[i]}`);
+  // console.log(`${myArray[i]}, ${typeof myArray[i]}`);
 
   // types[i] = typeof myArray[i];
   types.push(typeof myArray[i]);
 }
-console.log(types);
+// console.log(types);
 
 const years = [122, 324, 325, 523];
 const ages = [];
@@ -274,4 +274,17 @@ for (let i = 0; i < years.length; i++) {
   ages.push(2045 - years[i]);
 }
 
-console.log(ages);
+// console.log(ages);
+console.log("ONLY STRINGS");
+for (let i = 0; i < myArray.length; i++) {
+  // if (typeof myArray[i] !== "string") continue;
+  if (typeof myArray[i] !== "string") continue;
+  console.log(`${myArray[i]}, ${typeof myArray[i]}`);
+}
+
+console.log("BRAKE");
+for (let i = 0; i < myArray.length; i++) {
+  // if (typeof myArray[i] !== "string") continue;
+  if (typeof myArray[i] !== "number") break;
+  console.log(`${myArray[i]}, ${typeof myArray[i]}`);
+}
