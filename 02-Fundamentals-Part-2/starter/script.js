@@ -251,6 +251,27 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 
 ///////////////// iteration, for loop
 
-for (let rep = 1; rep < 10; rep++) {
-  console.log(`hey ${rep}`);
+// for (let rep = 1; rep < 10; rep++) {
+//   console.log(`hey ${rep}`);
+// }
+
+const myArray = ["chanu", 122, "luka", "star wars"];
+
+const types = [];
+
+for (let i = 0; i < myArray.length; i++) {
+  console.log(`${myArray[i]}, ${typeof myArray[i]}`);
+
+  // types[i] = typeof myArray[i];
+  types.push(typeof myArray[i]);
 }
+console.log(types);
+
+const years = [122, 324, 325, 523];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2045 - years[i]);
+}
+
+console.log(ages);
