@@ -288,3 +288,9 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 //   if (typeof myArray[i] !== "number") break;
 //   console.log(`${myArray[i]}, ${typeof myArray[i]}`);
 // }
+
+const chanu = ["chanu", "luka", 4324, "legend", ["fucking", "legend"]];
+
+for (let i = chanu.length - 1; i >= 0; i--) {
+  console.log(chanu[i]);
+}
