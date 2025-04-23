@@ -303,12 +303,19 @@ const chanu = ["chanu", "luka", 4324, "legend", ["fucking", "legend"]];
 //   }
 // }
 
-for (let rep = 1; rep < 6; rep++) {
-  console.log(`lifting weight repetition ${rep}`);
-}
+// for (let rep = 1; rep < 6; rep++) {
+//   console.log(`lifting weight repetition ${rep}`);
+// }
 
-let rep = 1;
-while (rep <= 10) {
-  console.log(`WHILE lifting ${rep}`);
-  rep++;
-}
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE lifting ${rep}`);
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//   console.log(`you rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+// }
