@@ -294,3 +294,11 @@ const chanu = ["chanu", "luka", 4324, "legend", ["fucking", "legend"]];
 for (let i = chanu.length - 1; i >= 0; i--) {
   console.log(chanu[i]);
 }
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`--------------------- starting ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`lifting weight repetition ${rep}`);
+  }
+}
