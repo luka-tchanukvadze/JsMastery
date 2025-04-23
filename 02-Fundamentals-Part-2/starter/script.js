@@ -291,14 +291,24 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 
 const chanu = ["chanu", "luka", 4324, "legend", ["fucking", "legend"]];
 
-for (let i = chanu.length - 1; i >= 0; i--) {
-  console.log(chanu[i]);
+// for (let i = chanu.length - 1; i >= 0; i--) {
+//   console.log(chanu[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`--------------------- starting ${exercise}`);
+
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`lifting weight repetition ${rep}`);
+//   }
+// }
+
+for (let rep = 1; rep < 6; rep++) {
+  console.log(`lifting weight repetition ${rep}`);
 }
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`--------------------- starting ${exercise}`);
-
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(`lifting weight repetition ${rep}`);
-  }
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE lifting ${rep}`);
+  rep++;
 }
