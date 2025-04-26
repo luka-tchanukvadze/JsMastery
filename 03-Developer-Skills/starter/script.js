@@ -7,5 +7,8 @@
 const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 // 1) understanding the problem
+// - what is temp amplitude? answer: diffrenece between highest and lowest temp
+// - how to compute max and min temeratures?
+// - what's a sensor error? and what to do?
 
 // 2) breaking up into sub-problems
