@@ -12,3 +12,7 @@ const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 // - what's a sensor error? and what to do?
 
 // 2) breaking up into sub-problems
+// - how to ingore errors?
+// - find max value in temp array
+// - find min value in temp array
+// - subtract min from max (amplitude) and return it
