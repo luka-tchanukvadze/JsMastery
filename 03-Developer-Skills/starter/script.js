@@ -41,5 +41,7 @@ console.log(amplitude);
 // function should now receive 2 arrays of temps
 
 // 1) understanding the problem
+// - with 2 arrays, should we implement functionality twise? NO!, just merge two arrays
 
 // 2) breaking up into sub-problems
+// - mege 2 arrays
