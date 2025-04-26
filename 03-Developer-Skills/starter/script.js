@@ -31,7 +31,8 @@ const calcTempAmplitude = function (temps) {
       min = curTemp;
     }
   }
-  return [max, min];
+  return max - min;
 };
 
-console.log(calcTempAmplitude(temperatures));
+const amplitude = calcTempAmplitude(temperatures);
+console.log(amplitude);
