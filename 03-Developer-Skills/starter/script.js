@@ -16,3 +16,18 @@ const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 // - find max value in temp array
 // - find min value in temp array
 // - subtract min from max (amplitude) and return it
+
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    if (temps[i] > max) {
+      max = temps[i];
+    } else if (temps[i] < min) {
+      min = temps[i];
+    }
+  }
+  return [max, min];
+};
+
+console.log(calcTempAmplitude(temperatures));
