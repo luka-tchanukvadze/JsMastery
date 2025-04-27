@@ -71,51 +71,51 @@ console.log(amplitude);
 // const amplitude = calcTempAmplitude(temperatures, [50, 3, 24]);
 // console.log(amplitude);
 
-const measureKelvnin = function () {
-  const measurement = {
-    type: "temp",
-    unit: "celsius",
+// const measureKelvnin = function () {
+//   const measurement = {
+//     type: "temp",
+//     unit: "celsius",
 
-    // c) fix
-    // value: Number(prompt("Degrees celcius")),
-    value: 10,
-  };
+//     // c) fix
+//     // value: Number(prompt("Degrees celcius")),
+//     value: 10,
+//   };
 
-  // b) find
-  console.log(measurement);
+//   // b) find
+//   console.log(measurement);
 
-  console.log(measurement.value);
+//   console.log(measurement.value);
 
-  const kekvin = measurement.value + 243;
-  return kekvin;
-};
+//   const kekvin = measurement.value + 243;
+//   return kekvin;
+// };
 
-// a) indentify
-console.log(measureKelvnin());
+// // a) indentify
+// console.log(measureKelvnin());
 
-////////////////////////////////////////////
+// ////////////////////////////////////////////
 
-const calcTempAmplitudeBug = function (temps1, temps2) {
-  const temps = temps1.concat(temps2);
+// const calcTempAmplitudeBug = function (temps1, temps2) {
+//   const temps = temps1.concat(temps2);
 
-  let max = 0;
-  let min = 0;
+//   let max = 0;
+//   let min = 0;
 
-  for (let i = 0; i < temps.length; i++) {
-    const curTemp = temps[i];
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
 
-    if (typeof curTemp !== "number") continue;
+//     if (typeof curTemp !== "number") continue;
 
-    if (curTemp > max) {
-      max = curTemp;
-    } else if (curTemp < min) {
-      min = curTemp;
-    }
-  }
-  return max - min;
-};
+//     if (curTemp > max) {
+//       max = curTemp;
+//     } else if (curTemp < min) {
+//       min = curTemp;
+//     }
+//   }
+//   return max - min;
+// };
 
-const amplitude = calcTempAmplitudeBug([1, 4, 5], [50, 3, 24]);
-console.log(amplitude);
+// const amplitude = calcTempAmplitudeBug([1, 4, 5], [50, 3, 24]);
+// console.log(amplitude);
 
-// a) identify
+// // a) identify
