@@ -206,7 +206,6 @@ function analyzeWorkWeek(dailyHours) {
     isFullTime,
   };
 }
-
 const weeklyHours = [7.5, 8, 6.5, 0, 8.5, 5, 0];
 const analysis = analyzeWorkWeek(weeklyHours);
 console.log(analysis);
