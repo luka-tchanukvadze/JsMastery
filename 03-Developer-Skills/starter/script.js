@@ -48,25 +48,49 @@ console.log(amplitude);
 // 2) breaking up into sub-problems
 // - mege 2 arrays
 
-const calcTempAmplitude = function (temps1, temps2) {
-  const temps = temps1.concat(temps2);
+// const calcTempAmplitude = function (temps1, temps2) {
+//   const temps = temps1.concat(temps2);
 
-  let max = temps[0];
-  let min = temps[0];
+//   let max = temps[0];
+//   let min = temps[0];
 
-  for (let i = 0; i < temps.length; i++) {
-    const curTemp = temps[i];
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
 
-    if (typeof curTemp !== "number") continue;
+//     if (typeof curTemp !== "number") continue;
 
-    if (curTemp > max) {
-      max = curTemp;
-    } else if (curTemp < min) {
-      min = curTemp;
-    }
-  }
-  return max - min;
+//     if (curTemp > max) {
+//       max = curTemp;
+//     } else if (curTemp < min) {
+//       min = curTemp;
+//     }
+//   }
+//   return max - min;
+// };
+
+// const amplitude = calcTempAmplitude(temperatures, [50, 3, 24]);
+// console.log(amplitude);
+
+const measureKelvnin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",
+
+    // c) fix
+    value: Number(prompt("Degrees celcius")),
+  };
+
+  // b) find
+  console.log(measurement);
+  // console.table(measurement);
+
+  console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+
+  const kekvin = measurement.value + 243;
+  return kekvin;
 };
 
-const amplitude = calcTempAmplitude(temperatures, [50, 3, 24]);
-console.log(amplitude);
+// a) indentify
+console.log(measureKelvnin());
