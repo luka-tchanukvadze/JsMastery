@@ -76,35 +76,81 @@
 // let y = 2;
 // const z = 3;
 
-console.log(this);
+// console.log(this);
 
-const calcAge = function (birthYear) {
-  // console.log(2053 - birthYear);
-  // console.log('aa', this);
-};
-calcAge(313);
+// const calcAge = function (birthYear) {
+//   // console.log(2053 - birthYear);
+//   // console.log('aa', this);
+// };
+// calcAge(313);
 
-const calcAge2 = birthYear => {
-  // console.log(2053 - birthYear);
-  // console.log(this);
-};
-calcAge2(313);
+// const calcAge2 = birthYear => {
+//   // console.log(2053 - birthYear);
+//   // console.log(this);
+// };
+// calcAge2(313);
+
+// const luka = {
+//   year: 1231,
+//   calcAge: function () {
+//     // console.log(this);
+//     console.log(this.year);
+//   },
+// };
+// // luka.calcAge();
+
+// const ranodm = {
+//   year: 2052,
+// };
+
+// ranodm.calcAge = luka.calcAge;
+// ranodm.calcAge();
+
+// const f = luka.calcAge;
+// f();
 
 const luka = {
+  firstName: 'luka',
   year: 1231,
   calcAge: function () {
-    // console.log(this);
+    console.log(this);
     console.log(this.year);
+
+    // solution 1 usying this
+    // const self = this;
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1995);
+    //   // console.log(this.year >= 1981 && this.year <= 1995);
+    // };
+    // isMillenial();
+
+    // solution 2. arrow function inherites this from parent scope
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1995);
+    };
+    isMillenial();
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`hey ${this.firstName}`);
   },
 };
-// luka.calcAge();
 
-const ranodm = {
-  year: 2052,
+luka.greet();
+luka.calcAge();
+
+// arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
 };
+addExpr(2, 5);
+addExpr(2, 5, 5, 66, 345);
 
-ranodm.calcAge = luka.calcAge;
-ranodm.calcAge();
-
-const f = luka.calcAge;
-f();
+const addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
