@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // function calcAge(birthYear) {
 //   const age = 2047 - birthYear;
@@ -40,38 +40,71 @@
 // console.log(job);
 // console.log(year);
 
-var me = 'luka';
-let job = 'fd';
-const year = 1991;
+// var me = 'luka';
+// let job = 'fd';
+// const year = 1991;
 
-////
+// ////
 
-// Functions
-// console.log(addDecl(53, 2));
-// console.log(addExpr(3, 5));
-// console.log(addArrow(3, 4));
+// // Functions
+// // console.log(addDecl(53, 2));
+// // console.log(addExpr(3, 5));
+// // console.log(addArrow(3, 4));
 
-function addDecl(a, b) {
-  return a + b;
-}
+// function addDecl(a, b) {
+//   return a + b;
+// }
 
-const addExpr = function (a, b) {
-  return a + b;
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
+
+// const addArrow = (a, b) => a + b;
+
+// //////////////////////// example
+
+// if (!numProducts) deleteShoppingCart();
+
+// var numProducts = 10;
+
+// function deleteShoppingCart() {
+//   console.log('all products deleted');
+// }
+
+// // differnece (window)
+// var x = 1;
+// let y = 2;
+// const z = 3;
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  // console.log(2053 - birthYear);
+  // console.log('aa', this);
+};
+calcAge(313);
+
+const calcAge2 = birthYear => {
+  // console.log(2053 - birthYear);
+  // console.log(this);
+};
+calcAge2(313);
+
+const luka = {
+  year: 1231,
+  calcAge: function () {
+    // console.log(this);
+    console.log(this.year);
+  },
+};
+// luka.calcAge();
+
+const ranodm = {
+  year: 2052,
 };
 
-const addArrow = (a, b) => a + b;
+ranodm.calcAge = luka.calcAge;
+ranodm.calcAge();
 
-//////////////////////// example
-
-if (!numProducts) deleteShoppingCart();
-
-var numProducts = 10;
-
-function deleteShoppingCart() {
-  console.log('all products deleted');
-}
-
-// differnece (window)
-var x = 1;
-let y = 2;
-const z = 3;
+const f = luka.calcAge;
+f();
