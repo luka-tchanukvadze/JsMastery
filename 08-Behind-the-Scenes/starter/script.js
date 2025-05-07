@@ -185,9 +185,17 @@ const jessica = {
 const jessicaCopy = { ...jessica };
 jessicaCopy.lastName = 'Davis';
 
-console.log(jessica, jessicaCopy);
-jessicaCopy.family.push('Mary');
-jessicaCopy.family.push('John');
+// console.log(jessica, jessicaCopy);
+// jessicaCopy.family.push('Mary');
+// jessicaCopy.family.push('John');
 
-console.log('Beofre:', jessica);
-console.log('After:', jessicaCopy);
+// console.log('Beofre:', jessica);
+// console.log('After:', jessicaCopy);
+
+// Deep Copy/clone
+const jessicaClone = structuredClone(jessica);
+jessicaClone.family.push('Mary');
+jessicaClone.family.push('John');
+
+console.log('Originial:', jessica);
+console.log('clone:', jessicaCopy);
