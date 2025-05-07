@@ -109,48 +109,67 @@
 // const f = luka.calcAge;
 // f();
 
-const luka = {
-  firstName: 'luka',
-  year: 1231,
-  calcAge: function () {
-    console.log(this);
-    console.log(this.year);
+// const luka = {
+//   firstName: 'luka',
+//   year: 1231,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(this.year);
 
-    // solution 1 usying this
-    // const self = this;
-    // const isMillenial = function () {
-    //   console.log(self);
-    //   console.log(self.year >= 1981 && self.year <= 1995);
-    //   // console.log(this.year >= 1981 && this.year <= 1995);
-    // };
-    // isMillenial();
+//     // solution 1 usying this
+//     // const self = this;
+//     // const isMillenial = function () {
+//     //   console.log(self);
+//     //   console.log(self.year >= 1981 && self.year <= 1995);
+//     //   // console.log(this.year >= 1981 && this.year <= 1995);
+//     // };
+//     // isMillenial();
 
-    // solution 2. arrow function inherites this from parent scope
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1995);
-    };
-    isMillenial();
-  },
+//     // solution 2. arrow function inherites this from parent scope
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1995);
+//     };
+//     isMillenial();
+//   },
 
-  greet: () => {
-    console.log(this);
-    console.log(`hey ${this.firstName}`);
-  },
+//   greet: () => {
+//     console.log(this);
+//     console.log(`hey ${this.firstName}`);
+//   },
+// };
+
+// luka.greet();
+// luka.calcAge();
+
+// // arguments keyword
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addExpr(2, 5);
+// addExpr(2, 5, 5, 66, 345);
+
+// const addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
 };
 
-luka.greet();
-luka.calcAge();
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
 
-// arguments keyword
-const addExpr = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
-addExpr(2, 5);
-addExpr(2, 5, 5, 66, 345);
+const marriedJessica = marryPerson(jessica, 'Davis');
 
-const addArrow = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
+// const marriedJessica = jessica;
+// marriedJessica.lastName = 'Davis';
+
+console.log('Beofre:', jessica);
+console.log('After:', marriedJessica);
