@@ -218,3 +218,15 @@ console.log(undefined || 0 || '' || 'hello' || 23 || null);
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 
 const guests2 = restaurant.numGuests || 10;
+
+console.log('------ and -------');
+console.log(0 && 'luka');
+console.log(7 && 'luka');
+
+console.log('helo' && 23 && null && null);
+
+if (restaurant.orderPizza) {
+  restaurant.orderPasta('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPasta('mushrooms', 'spinach');
