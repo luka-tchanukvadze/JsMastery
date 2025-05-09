@@ -63,6 +63,11 @@ const restaurant = {
   orderPasta: function (ing11, ing2, ing3) {
     console.log(`Here is your delicious pasta intgredients: ${ing11}`);
   },
+
+  orderPizza: function (mainIngredient, ...otherImgredients) {
+    console.log(mainIngredient);
+    console.log(otherImgredients);
+  },
 };
 
 // const arr = [2, 3, 4];
@@ -187,3 +192,17 @@ const [pizza, , risotto, ...otherFood] = [
 
 // Objects
 const { sat, ...weekdays } = restaurant.openingHours;
+
+// functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+};
+
+const x = [23, 5, 6];
+add(...x);
+
+add(2, 3);
+add(5, 3, 7, 2, 9);
+
+restaurant.orderPasta('mushrooms', 'onion');
