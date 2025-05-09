@@ -183,26 +183,38 @@ const restaurant = {
 
 ////////////////////////// Rest pattern  and Parameters
 
-const [a, b, ...others] = [1, 2, 3, 4, 5];
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
 
-// Objects
-const { sat, ...weekdays } = restaurant.openingHours;
+// // Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
 
-// functions
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-};
+// // functions
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+// };
 
-const x = [23, 5, 6];
-add(...x);
+// const x = [23, 5, 6];
+// add(...x);
 
-add(2, 3);
-add(5, 3, 7, 2, 9);
+// add(2, 3);
+// add(5, 3, 7, 2, 9);
 
-restaurant.orderPasta('mushrooms', 'onion');
+// restaurant.orderPasta('mushrooms', 'onion');
+
+// use any data type, return any data type, short-circuting
+console.log(3 || 'jonas');
+console.log('' || 'luka');
+console.log(undefined || 'luka');
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'hello' || 23 || null);
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+
+const guests2 = restaurant.numGuests || 10;
