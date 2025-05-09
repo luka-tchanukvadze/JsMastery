@@ -233,10 +233,43 @@ const restaurant = {
 
 //////////////////////////////// nullish coalescing operator
 
-restaurant.numGuests = 0;
+// restaurant.numGuests = 0;
 
-const guests = restaurant.numGuests || 10;
-console.log(guests);
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
 
-// Nullish: null and undefined (NOT 0 or '')
-const guestCorrect = restaurant.numGuests ?? 10;
+// // Nullish: null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+
+//////////////////// logical assignment operators
+
+const res1 = {
+  name: 'one',
+  numGuests: 20,
+};
+
+const res2 = {
+  name: 'two',
+  owner: 'someone',
+};
+
+// short circuiting
+// res1.numGuests = res1.numGuests || 10;
+// res2.numGuests = res2.numGuests || 10;
+
+// OR assignment operator
+// res1.numGuests ||= 10;
+// res2.numGuests ||= 10;
+
+// nullish assignment operator (null or undefined)
+res1.numGuests ??= 10;
+res2.numGuests ??= 10;
+
+// res1.owner = res1.owner && '<ANONYMOUS>';
+// res2.owner = res2.owner && '<ANONYMOUS>';
+
+res1.owner &&= '<ANONYMOUS>';
+res2.owner &&= '<ANONYMOUS>';
+
+console.log(res1);
+console.log(res2);
