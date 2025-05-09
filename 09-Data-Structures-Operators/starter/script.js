@@ -135,43 +135,55 @@ const restaurant = {
 
 //////////////////// spread operator
 
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1]];
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1]];
 
-const newArr = [1, 2, ...arr];
+// const newArr = [1, 2, ...arr];
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
 
-const mainMenuCopy = [...restaurant.mainMenu];
+// const mainMenuCopy = [...restaurant.mainMenu];
 
-// join 2 arrays
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// // join 2 arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-// real world example
-// iterables: arrays, strings, maps, sets. NOT object
-const str = 'Jonas';
-const letters = [...str, ' ', 'S.'];
-console.log(...str);
-// console.log(`${...str}`)
+// // real world example
+// // iterables: arrays, strings, maps, sets. NOT object
+// const str = 'Jonas';
+// const letters = [...str, ' ', 'S.'];
+// console.log(...str);
+// // console.log(`${...str}`)
 
-const ingredients = [
-  prompt("let's make pasta"),
-  prompt("let's make pasta"),
-  prompt("let's make pasta"),
+// const ingredients = [
+//   prompt("let's make pasta"),
+//   prompt("let's make pasta"),
+//   prompt("let's make pasta"),
+// ];
+
+// restaurant.orderPasta(...ingredients);
+
+// // Objects
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+// console.log(newRestaurant);
+
+// const restaurantCOpy = { ...restaurant };
+// restaurantCOpy.name = 'Ristorante Roma';
+
+// const a = [1, 2, 3];
+// const b = [...a];
+// b[1] = 5;
+// console.log(a);
+// console.log(b);
+
+////////////////////////// Rest pattern  and Parameters
+
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
 ];
 
-restaurant.orderPasta(...ingredients);
-
 // Objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
-console.log(newRestaurant);
-
-const restaurantCOpy = { ...restaurant };
-restaurantCOpy.name = 'Ristorante Roma';
-
-const a = [1, 2, 3];
-const b = [...a];
-b[1] = 5;
-console.log(a);
-console.log(b);
+const { sat, ...weekdays } = restaurant.openingHours;
