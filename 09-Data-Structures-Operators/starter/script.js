@@ -208,25 +208,35 @@ const restaurant = {
 // restaurant.orderPasta('mushrooms', 'onion');
 
 // use any data type, return any data type, short-circuting
-console.log(3 || 'jonas');
-console.log('' || 'luka');
-console.log(undefined || 'luka');
-console.log(undefined || null);
+// console.log(3 || 'jonas');
+// console.log('' || 'luka');
+// console.log(undefined || 'luka');
+// console.log(undefined || null);
 
-console.log(undefined || 0 || '' || 'hello' || 23 || null);
+// console.log(undefined || 0 || '' || 'hello' || 23 || null);
 
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 
-const guests2 = restaurant.numGuests || 10;
+// const guests2 = restaurant.numGuests || 10;
 
-console.log('------ and -------');
-console.log(0 && 'luka');
-console.log(7 && 'luka');
+// console.log('------ and -------');
+// console.log(0 && 'luka');
+// console.log(7 && 'luka');
 
-console.log('helo' && 23 && null && null);
+// console.log('helo' && 23 && null && null);
 
-if (restaurant.orderPizza) {
-  restaurant.orderPasta('mushrooms', 'spinach');
-}
+// if (restaurant.orderPizza) {
+//   restaurant.orderPasta('mushrooms', 'spinach');
+// }
 
-restaurant.orderPizza && restaurant.orderPasta('mushrooms', 'spinach');
+// restaurant.orderPizza && restaurant.orderPasta('mushrooms', 'spinach');
+
+//////////////////////////////// nullish coalescing operator
+
+restaurant.numGuests = 0;
+
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish: null and undefined (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
