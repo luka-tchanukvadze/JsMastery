@@ -376,3 +376,9 @@ GOOD LUCK 😀
 // console.log([...menu.entries()]);
 
 ///////////////////////// enhanced object literals
+
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// with optional chaining
+console.log(restaurant.openingHours.mon?.open);
