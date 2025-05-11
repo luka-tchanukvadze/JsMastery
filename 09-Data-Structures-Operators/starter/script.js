@@ -382,3 +382,16 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
 
 // with optional chaining
 console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// example
+const days = ['mon', 'tue', 'wed'];
+
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day} we open at ${open}`);
+}
+
+// methods
+console.log(restaurant.order?.(0, 1) ?? 'method does not exit');
