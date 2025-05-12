@@ -405,3 +405,13 @@ for (const day of Object.keys(openingHours)) {
 }
 
 console.log(openStr);
+
+const values = Object.values(openingHours);
+
+// Entrie object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
