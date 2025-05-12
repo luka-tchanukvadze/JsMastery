@@ -395,3 +395,13 @@ GOOD LUCK 😀
 
 // // methods
 // console.log(restaurant.order?.(0, 1) ?? 'method does not exit');
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of Object.keys(openingHours)) {
+  openStr += `${day}, `;
+}
+
+console.log(openStr);
