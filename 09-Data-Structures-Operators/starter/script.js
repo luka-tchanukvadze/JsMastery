@@ -440,25 +440,46 @@ GOOD LUCK 😀
 */
 
 // 1.
-for (const [i, player] of game.scored.entries())
-  console.log(`Goal ${i + 1}: ${player}`);
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
 
-// 2.
-const odds = Object.values(game.odds);
-let average = 0;
-for (const odd of Object.values(game.odds)) average += odd;
-average /= odds.length;
+// // 2.
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of Object.values(game.odds)) average += odd;
+// average /= odds.length;
 
-console.log(average);
+// console.log(average);
 
-// 3.
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-  console.log(`Odd of ... ${odd}`);
-}
+// // 3.
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//   console.log(`Odd of ... ${odd}`);
+// }
 
-// 4.
-const scorers = {};
-for (const player of game.scored) {
-  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
-}
+// // 4.
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+// }
+
+const ordersSet = new Set(['pasta', 'pizza', 'pizza']);
+console.log(ordersSet);
+
+console.log(new Set('Luka'));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('pizza'));
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+ordersSet.clear();
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+// example
+const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(new Set(staff).size);
