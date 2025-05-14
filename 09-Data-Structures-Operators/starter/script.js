@@ -492,3 +492,13 @@ const italianMexicanFusion = italianFoods.union(mexicanFoods);
 console.log('Union:', italianMexicanFusion);
 
 console.log(new Set([...italianFoods, ...mexicanFoods]));
+console.log([...new Set([...italianFoods, ...mexicanFoods])]);
+
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+console.log('Difference italian', uniqueItalianFoods);
+
+const uniqueItalianAndMexicanFoods =
+  italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueItalianAndMexicanFoods);
+
+console.log(italianFoods.isDisjointFrom(mexicanFoods));
