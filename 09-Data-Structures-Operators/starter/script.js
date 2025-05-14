@@ -461,25 +461,34 @@ GOOD LUCK 😀
 // const scorers = {};
 // for (const player of game.scored) {
 //   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
-// }
+// // }
 
-const ordersSet = new Set(['pasta', 'pizza', 'pizza']);
-console.log(ordersSet);
+// const ordersSet = new Set(['pasta', 'pizza', 'pizza']);
+// console.log(ordersSet);
 
-console.log(new Set('Luka'));
+// console.log(new Set('Luka'));
 
-console.log(ordersSet.size);
-console.log(ordersSet.has('pizza'));
-ordersSet.add('Garlic Bread');
-ordersSet.add('Garlic Bread');
-console.log(ordersSet);
-ordersSet.clear();
-console.log(ordersSet);
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('pizza'));
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+// console.log(ordersSet);
+// ordersSet.clear();
+// console.log(ordersSet);
 
-for (const order of ordersSet) console.log(order);
+// for (const order of ordersSet) console.log(order);
 
-// example
-const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef'];
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
-console.log(new Set(staff).size);
+// // example
+// const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+// console.log(new Set(staff).size);
+
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log('Intersection', commonFoods);
+console.log([...commonFoods]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log('Union:', italianMexicanFusion);
+
+console.log(new Set([...italianFoods, ...mexicanFoods]));
