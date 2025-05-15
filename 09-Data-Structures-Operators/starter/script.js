@@ -519,3 +519,9 @@ console.log(rest.get(true));
 
 const time = 21;
 rest.get(time > rest.get('open') && time < rest.get('close'));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+
+console.log(rest.size);
+// rest.clear();
