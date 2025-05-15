@@ -484,21 +484,35 @@ GOOD LUCK 😀
 // console.log(staffUnique);
 // console.log(new Set(staff).size);
 
-const commonFoods = italianFoods.intersection(mexicanFoods);
-console.log('Intersection', commonFoods);
-console.log([...commonFoods]);
+// const commonFoods = italianFoods.intersection(mexicanFoods);
+// console.log('Intersection', commonFoods);
+// console.log([...commonFoods]);
 
-const italianMexicanFusion = italianFoods.union(mexicanFoods);
-console.log('Union:', italianMexicanFusion);
+// const italianMexicanFusion = italianFoods.union(mexicanFoods);
+// console.log('Union:', italianMexicanFusion);
 
-console.log(new Set([...italianFoods, ...mexicanFoods]));
-console.log([...new Set([...italianFoods, ...mexicanFoods])]);
+// console.log(new Set([...italianFoods, ...mexicanFoods]));
+// console.log([...new Set([...italianFoods, ...mexicanFoods])]);
 
-const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
-console.log('Difference italian', uniqueItalianFoods);
+// const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+// console.log('Difference italian', uniqueItalianFoods);
 
-const uniqueItalianAndMexicanFoods =
-  italianFoods.symmetricDifference(mexicanFoods);
-console.log(uniqueItalianAndMexicanFoods);
+// const uniqueItalianAndMexicanFoods =
+//   italianFoods.symmetricDifference(mexicanFoods);
+// console.log(uniqueItalianAndMexicanFoods);
 
-console.log(italianFoods.isDisjointFrom(mexicanFoods));
+// console.log(italianFoods.isDisjointFrom(mexicanFoods));
+
+const rest = new Map();
+rest.set('name', 'classico italiano');
+rest.set(1, 'firenze, italy');
+rest.set(2, 'Lisbon, Portugal');
+
+rest
+  .set('categories', ['italian', 'pizzeria'])
+  .set('open', 11)
+  .set(true, 'we are open')
+  .set(false, 'we are closed');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
