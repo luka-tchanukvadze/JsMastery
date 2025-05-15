@@ -525,3 +525,11 @@ rest.delete(2);
 
 console.log(rest.size);
 // rest.clear();
+
+rest.set([1, 2], 'Test');
+
+console.log(rest.get([1, 2]));
+
+const arr = [1, 2];
+rest.set(arr, 'Test');
+console.log(rest.get(arr));
