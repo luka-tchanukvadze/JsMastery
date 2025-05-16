@@ -547,3 +547,13 @@ const question = new Map([
 // Conver object to map
 const hoursMap = new Map(Object.entries(openingHours));
 console.log(hoursMap);
+
+console.log(question.question);
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = prompt('Your answer');
+console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));
