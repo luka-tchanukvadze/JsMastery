@@ -503,33 +503,47 @@ GOOD LUCK 😀
 
 // console.log(italianFoods.isDisjointFrom(mexicanFoods));
 
-const rest = new Map();
-rest.set('name', 'classico italiano');
-rest.set(1, 'firenze, italy');
-rest.set(2, 'Lisbon, Portugal');
+// const rest = new Map();
+// rest.set('name', 'classico italiano');
+// rest.set(1, 'firenze, italy');
+// rest.set(2, 'Lisbon, Portugal');
 
-rest
-  .set('categories', ['italian', 'pizzeria'])
-  .set('open', 11)
-  .set(true, 'we are open')
-  .set(false, 'we are closed');
+// rest
+//   .set('categories', ['italian', 'pizzeria'])
+//   .set('open', 11)
+//   .set(true, 'we are open')
+//   .set(false, 'we are closed');
 
-console.log(rest.get('name'));
-console.log(rest.get(true));
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
 
-const time = 21;
-rest.get(time > rest.get('open') && time < rest.get('close'));
+// const time = 21;
+// rest.get(time > rest.get('open') && time < rest.get('close'));
 
-console.log(rest.has('categories'));
-rest.delete(2);
+// console.log(rest.has('categories'));
+// rest.delete(2);
 
-console.log(rest.size);
-// rest.clear();
+// console.log(rest.size);
+// // rest.clear();
 
-rest.set([1, 2], 'Test');
+// rest.set([1, 2], 'Test');
 
-console.log(rest.get([1, 2]));
+// console.log(rest.get([1, 2]));
 
-const arr = [1, 2];
-rest.set(arr, 'Test');
-console.log(rest.get(arr));
+// const arr = [1, 2];
+// rest.set(arr, 'Test');
+// console.log(rest.get(arr));
+
+const question = new Map([
+  ['question', 'what is the best programming language in the world'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+
+// Conver object to map
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
