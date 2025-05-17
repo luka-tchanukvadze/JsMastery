@@ -578,34 +578,63 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
-const gameEvents = new Map([
-  [17, '⚽️ GOAL'],
-  [36, '🔁 Substitution'],
-  [47, '⚽️ GOAL'],
-  [61, '🔁 Substitution'],
-  [64, '🔶 Yellow card'],
-  [69, '🔴 Red card'],
-  [70, '🔁 Substitution'],
-  [72, '🔁 Substitution'],
-  [76, '⚽️ GOAL'],
-  [80, '⚽️ GOAL'],
-  [92, '🔶 Yellow card'],
-]);
+// const gameEvents = new Map([
+//   [17, '⚽️ GOAL'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽️ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽️ GOAL'],
+//   [80, '⚽️ GOAL'],
+//   [92, '🔶 Yellow card'],
+// ]);
 
-// 1
-const events = new Set(gameEvents.values());
+// // 1
+// const events = new Set(gameEvents.values());
 
-// 2
-gameEvents.delete(64);
-console.log(gameEvents);
+// // 2
+// gameEvents.delete(64);
+// console.log(gameEvents);
 
-// 3
-const minutes = [...gameEvents.keys()].pop();
-console.log(minutes);
-console.log(`An event happened, on averge every${minutes / gameEvents.size}`);
+// // 3
+// const minutes = [...gameEvents.keys()].pop();
+// console.log(minutes);
+// console.log(`An event happened, on averge every${minutes / gameEvents.size}`);
 
-// 4
-for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? 'first' : 'second';
-  console.log(`${half}: ${min}: ${event}`);
-}
+// // 4
+// for (const [min, event] of gameEvents) {
+//   const half = min <= 45 ? 'first' : 'second';
+//   console.log(`${half}: ${min}: ${event}`);
+// }
+
+const airline = 'Tap air protugal';
+const plane = 'a320';
+
+console.log(plane[0]);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // b and e are middle seats
+  const s = seat.slice(-1);
+  if (s === 'b' || s === 'e') console.log('middle');
+  else console.log('lucky');
+};
+
+checkMiddleSeat('11b');
+checkMiddleSeat('23c');
+checkMiddleSeat('3e');
