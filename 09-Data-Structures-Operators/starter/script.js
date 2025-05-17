@@ -613,28 +613,57 @@ GOOD LUCK 😀
 const airline = 'Tap air protugal';
 const plane = 'a320';
 
-console.log(plane[0]);
+console.log(airline.toLowerCase());
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('portugal'));
+// fix capitalazation in name
+const passenger = 'lUka';
+const passengerLowe = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLowe[0].toLocaleUpperCase() + passengerLowe.slice(1);
+console.log(passengerCorrect);
 
-console.log(airline.slice(4));
-console.log(airline.slice(4, 7));
+// comparing email
+const email = 'hello@luka.io';
+const loginEmail = '   hello@Luka.Io';
 
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail)
 
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+const nomralizedEmail = loginEmail.toLowerCase().trim();
+console.log(nomralizedEmail);
+console.log(email === nomralizedEmail);
 
-const checkMiddleSeat = function (seat) {
-  // b and e are middle seats
-  const s = seat.slice(-1);
-  if (s === 'b' || s === 'e') console.log('middle');
-  else console.log('lucky');
+// replacing
+const priceGB = '2bb,97$';
+const priceUS = priceGB.replace('$', '*').replace(',', '.');
+console.log(priceUS);
+
+const announcement = 'all passengeers come to borading door door';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+
+console.log(announcement.replace(/door/g, 'gate'));
+
+// booleans
+const plane2 = 'Air a320neo';
+console.log(plane2.includes('a320'));
+console.log(plane2.startsWith('air'));
+console.log(plane2.startsWith('Air'));
+
+if (plane2.startsWith('Air') && plane2.endsWith('neo')) {
+  console.log('part of new airbus family');
+}
+
+// practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife')) {
+    console.log('you are not allowed on board');
+  } else {
+    console.log('welcome aboard');
+  }
 };
 
-checkMiddleSeat('11b');
-checkMiddleSeat('23c');
-checkMiddleSeat('3e');
+checkBaggage('I have a laptop, some food and a pocket knife');
