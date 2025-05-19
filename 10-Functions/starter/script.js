@@ -26,31 +26,31 @@
 // createBooking('LH123', 3);
 // createBooking('LH123', undefined, 800);
 
-const flight = 'LH123';
+// const flight = 'LH123';
 
-const luka = {
-  name: 'Luka Chanu',
-  passport: 32324324324,
-};
+// const luka = {
+//   name: 'Luka Chanu',
+//   passport: 32324324324,
+// };
 
-const checkIn = function (flightNum, passenger) {
-  flightNum = 'LH999';
-  passenger.name = 'MR. ' + passenger.name;
+// const checkIn = function (flightNum, passenger) {
+//   flightNum = 'LH999';
+//   passenger.name = 'MR. ' + passenger.name;
 
-  if (passenger.passport === 4324324324) {
-    alert('checked in');
-  } else {
-    alert('wrong passport');
-  }
-};
+//   if (passenger.passport === 4324324324) {
+//     alert('checked in');
+//   } else {
+//     alert('wrong passport');
+//   }
+// };
 
-checkIn(flight, luka);
-console.log(flight);
-console.log(luka);
+// checkIn(flight, luka);
+// console.log(flight);
+// console.log(luka);
 
-const newPassport = function (person) {
-  person.passport = Math.trunc(Math.random() * 10000);
-};
+// const newPassport = function (person) {
+//   person.passport = Math.trunc(Math.random() * 10000);
+// };
 
-newPassport(luka);
-checkIn(flight, luka);
+// newPassport(luka);
+// checkIn(flight, luka);
