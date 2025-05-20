@@ -65,4 +65,12 @@ const upperFirstWord = function (str) {
 };
 
 // Higher-order function
-const transfomer = function (str, fn) {};
+const transfomer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Tranformed by: ${fn.name}`);
+};
+
+transfomer('Javascript is the best!', upperFirstWord);
+transfomer('Javascript is the best!', oneWord);
