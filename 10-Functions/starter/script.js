@@ -88,8 +88,19 @@
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
+
+    return function (name2) {
+      console.log(name2);
+    };
   };
 };
 
 const greeterHey = greet('hey');
 greeterHey('luka');
+
+greet('hello')('Luka')('good');
+
+// challenge
+
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+greetArr('hello')('Luka');
