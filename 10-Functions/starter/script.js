@@ -105,89 +105,89 @@
 // const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 // greetArr('hello')('Luka');
 
-const lufthansa = {
-  airline: 'Luthansa',
-  iataCode: 'LH',
-  bookings: [],
+// const lufthansa = {
+//   airline: 'Luthansa',
+//   iataCode: 'LH',
+//   bookings: [],
 
-  book(flightNum, name) {
-    console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
-    );
-    this.bookings.push({ flight: `light ${this.iataCode} ${flightNum}` });
-  },
-};
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+//     );
+//     this.bookings.push({ flight: `light ${this.iataCode} ${flightNum}` });
+//   },
+// };
 
-lufthansa.book(234, 'Luka Chanu');
-lufthansa.book(442, 'John Smith');
-console.log(lufthansa);
+// lufthansa.book(234, 'Luka Chanu');
+// lufthansa.book(442, 'John Smith');
+// console.log(lufthansa);
 
-const eurowings = {
-  airline: 'Eurowings',
-  iataCode: 'EW',
-  bookings: [],
-};
+// const eurowings = {
+//   airline: 'Eurowings',
+//   iataCode: 'EW',
+//   bookings: [],
+// };
 
-const book = lufthansa.book;
+// const book = lufthansa.book;
 
-// Does NOT work
-// book(23, 'wow wow')
+// // Does NOT work
+// // book(23, 'wow wow')
 
-book.call(eurowings, 23, 'Sarah Williams');
+// book.call(eurowings, 23, 'Sarah Williams');
 
-book.call(lufthansa, 234, 'Spider Man');
+// book.call(lufthansa, 234, 'Spider Man');
 
-const swiss = {
-  airline: 'Swiss Air lines',
-  iataCode: 'lx',
-  bookings: [],
-};
+// const swiss = {
+//   airline: 'Swiss Air lines',
+//   iataCode: 'lx',
+//   bookings: [],
+// };
 
-book.call(swiss, 424, 'Mary Jayn or whaterver');
-console.log(swiss);
+// book.call(swiss, 424, 'Mary Jayn or whaterver');
+// console.log(swiss);
 
-// Apply method
-const flightData = [523, 'George Cooper'];
-book.apply(swiss, flightData);
-console.log(swiss);
+// // Apply method
+// const flightData = [523, 'George Cooper'];
+// book.apply(swiss, flightData);
+// console.log(swiss);
 
-book.call(swiss, ...flightData);
-console.log(swiss);
+// book.call(swiss, ...flightData);
+// console.log(swiss);
 
-// the bind methode
-const bookEW = book.bind(eurowings);
-const bookLH = book.bind(lufthansa);
-const bookLX = book.bind(swiss);
+// // the bind methode
+// const bookEW = book.bind(eurowings);
+// const bookLH = book.bind(lufthansa);
+// const bookLX = book.bind(swiss);
 
-bookEW(23, 'steven williams');
-const bookEW23 = book.bind(eurowings, 23);
-bookEW23('random');
-bookEW23('random2');
+// bookEW(23, 'steven williams');
+// const bookEW23 = book.bind(eurowings, 23);
+// bookEW23('random');
+// bookEW23('random2');
 
-// With Event Listeners
-lufthansa.planes = 300;
-lufthansa.buyPlane = function () {
-  this.planes++;
-  console.log(this.planes);
-};
+// // With Event Listeners
+// lufthansa.planes = 300;
+// lufthansa.buyPlane = function () {
+//   this.planes++;
+//   console.log(this.planes);
+// };
 
-document
-  .querySelector('.buy')
-  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+// document
+//   .querySelector('.buy')
+//   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
-// Partial application
+// // Partial application
 
-const addTax = (rate, value) => value + value * rate;
-console.log(addTax(0.1, 200));
+// const addTax = (rate, value) => value + value * rate;
+// console.log(addTax(0.1, 200));
 
-const addVAT = addTax.bind(null, 0.23);
-console.log(addVAT(100));
+// const addVAT = addTax.bind(null, 0.23);
+// console.log(addVAT(100));
 
-const addTaxRate = function (rate) {
-  return function (value) {
-    return value + value * rate;
-  };
-};
+// const addTaxRate = function (rate) {
+//   return function (value) {
+//     return value + value * rate;
+//   };
+// };
 
-const addVAT2 = addTaxRate(0.23);
-console.log(addVAT2(100));
+// const addVAT2 = addTaxRate(0.23);
+// console.log(addVAT2(100));
