@@ -289,6 +289,7 @@ GOOD LUCK 😀
 // booker();
 // booker();
 
+// example 1
 let f;
 
 const g = function () {
@@ -298,5 +299,17 @@ const g = function () {
   };
 };
 
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
 g();
 f();
+
+// Re--assigning f function
+h();
+f();
+console.dir(f);
