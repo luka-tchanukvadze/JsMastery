@@ -263,14 +263,28 @@ GOOD LUCK 😀
 //   .querySelector('.poll')
 //   .addEventListener('click', poll.registerNewAnswer.bind(poll));
 
-const runOnce = function () {
-  console.log('this will never run again');
+// const runOnce = function () {
+//   console.log('this will never run again');
+// };
+// runOnce();
+
+// // iife
+// (function () {
+//   console.log('REALLY: this will never run again');
+// })();
+
+// (() => console.log('REALLY: this will never run again'))();
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
 };
-runOnce();
 
-// iife
-(function () {
-  console.log('REALLY: this will never run again');
-})();
-
-(() => console.log('REALLY: this will never run again'))();
+const booker = secureBooking();
+booker();
+booker();
+booker();
