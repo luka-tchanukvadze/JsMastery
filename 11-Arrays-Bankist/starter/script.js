@@ -117,12 +117,31 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // // join
 // console.log(letters.join('-'));
 
-const arr = [23, 11, 13];
-console.log(arr[0]);
-console.log(arr.at(0));
+// const arr = [23, 11, 13];
+// console.log(arr[0]);
+// console.log(arr.at(0));
 
-console.log(arr[arr.length - 1]);
-console.log(arr.slice(-1)[0]);
-console.log(arr.at(-1));
+// console.log(arr[arr.length - 1]);
+// console.log(arr.slice(-1)[0]);
+// console.log(arr.at(-1));
 
-console.log('luka'.at(1));
+// console.log('luka'.at(1));
+
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(i + ' you deposited');
+  } else {
+    console.log('you withdrew');
+  }
+}
+
+console.log('//////////foreach//////////');
+
+movements.forEach(function (movement, index, array) {
+  if (movement > 0) {
+    console.log(index + array + ' you deposited');
+  } else {
+    console.log('you withdrew');
+  }
+});
