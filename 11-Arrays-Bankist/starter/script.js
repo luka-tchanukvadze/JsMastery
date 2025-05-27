@@ -147,12 +147,12 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // });
 
 // foreach and map
-currencies.forEach(function (value, key, map) {
-  console.log(`${key}: ${value}`);
-});
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
 
-const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+// const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
 
-currenciesUnique.forEach(function (value, key, map) {
-  console.log(`${key}: ${value}`);
-});
+// currenciesUnique.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
