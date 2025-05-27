@@ -128,20 +128,20 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log('luka'.at(1));
 
 // for (const movement of movements) {
-for (const [i, movement] of movements.entries()) {
-  if (movement > 0) {
-    console.log(i + ' you deposited');
-  } else {
-    console.log('you withdrew');
-  }
-}
+// for (const [i, movement] of movements.entries()) {
+//   if (movement > 0) {
+//     console.log(i + ' you deposited');
+//   } else {
+//     console.log('you withdrew');
+//   }
+// }
 
-console.log('//////////foreach//////////');
+// console.log('//////////foreach//////////');
 
-movements.forEach(function (movement, index, array) {
-  if (movement > 0) {
-    console.log(index + array + ' you deposited');
-  } else {
-    console.log('you withdrew');
-  }
-});
+// movements.forEach(function (movement, index, array) {
+//   if (movement > 0) {
+//     console.log(index + array + ' you deposited');
+//   } else {
+//     console.log('you withdrew');
+//   }
+// });
