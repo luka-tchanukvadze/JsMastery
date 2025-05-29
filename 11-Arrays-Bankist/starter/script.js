@@ -92,4 +92,4 @@ const createUsernames = accs => {
 };
 
 createUsernames(accounts);
-console.log(accounts);
+// console.log(accounts);

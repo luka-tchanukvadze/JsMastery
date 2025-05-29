@@ -175,12 +175,21 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const movementsUSDArrow = movements.map(mov => mov * eurToUsd);
 
-const deposits = movements.filter(mov => mov > 0);
-console.log(deposits);
+// const deposits = movements.filter((mov, i) => mov > 0 && i > 0);
+// console.log(deposits);
 
-const depositsFor = [];
-for (const mov of movements) if (mov > 0) depositsFor.push(mov);
-console.log(depositsFor);
+// const depositsFor = [];
+// for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+// console.log(depositsFor);
 
-const withdrawals = movements.filter(mov => mov < 0);
-console.log(withdrawals);
+// const withdrawals = movements.filter(mov => mov < 0);
+// console.log(withdrawals);
+
+const balance = movements.reduce((acc, cur, i, arr) => acc + cur, 10000);
+console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) {
+  balance2 += mov;
+}
+console.log(balance2);
