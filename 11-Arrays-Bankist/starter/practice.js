@@ -220,31 +220,39 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 
 */
-const calcAverageHumanAge = function (ages) {
-  const humanAge = ages.map(age => (age <= 2 ? age * 2 : 16 + age * 4));
-  const adults = humanAge.filter(age => age >= 18);
+// const calcAverageHumanAge = function (ages) {
+//   const humanAge = ages.map(age => (age <= 2 ? age * 2 : 16 + age * 4));
+//   const adults = humanAge.filter(age => age >= 18);
 
-  // const sumAge = adults.reduce((acc, cur) => acc + cur);
-  // const sumAge = adults.reduce(
-  //   (acc, cur) => acc + cur,
-  //   0
-  // );
-  // const average = sumAge / adults.length;
-  const sumAgeAverage = adults.reduce(
-    (acc, cur, i, arr) => acc + cur / arr.length,
-    0
-  );
+//   // const sumAge = adults.reduce((acc, cur) => acc + cur);
+//   // const sumAge = adults.reduce(
+//   //   (acc, cur) => acc + cur,
+//   //   0
+//   // );
+//   // const average = sumAge / adults.length;
+//   const sumAgeAverage = adults.reduce(
+//     (acc, cur, i, arr) => acc + cur / arr.length,
+//     0
+//   );
 
-  console.log(`human age: ${humanAge}`);
-  console.log(`adult age: ${adults}`);
-  // console.log(`sum of ages: ${sumAge}`);
+//   console.log(`human age: ${humanAge}`);
+//   console.log(`adult age: ${adults}`);
+//   // console.log(`sum of ages: ${sumAge}`);
 
-  // console.log(`average: ${average}`);
-  console.log(`average: ${sumAgeAverage}`);
-  console.log(`/////////////////`);
+//   // console.log(`average: ${average}`);
+//   console.log(`average: ${sumAgeAverage}`);
+//   console.log(`/////////////////`);
 
-  return sumAgeAverage;
-};
-const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
-console.log(avg1, avg2);
+//   return sumAgeAverage;
+// };
+// const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// console.log(avg1, avg2);
+
+const eurToUsd = 1.1;
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalDepositsUSD);
