@@ -284,12 +284,12 @@ GOOD LUCK 😀
 // const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 // console.log(avg1, avg2);
 
-const firstWidthdrawal = movements.find(mov => mov < 0);
-console.log(firstWidthdrawal);
+// const firstWidthdrawal = movements.find(mov => mov < 0);
+// console.log(firstWidthdrawal);
 
-const account = accounts.find(acc => acc.owner === 'Jessica Davis');
-console.log(account);
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+// console.log(account);
 
-for (const acc of accounts) {
-  if (acc.owner === 'Jessica Davis') console.log(acc);
-}
+// for (const acc of accounts) {
+//   if (acc.owner === 'Jessica Davis') console.log(acc);
+// }
