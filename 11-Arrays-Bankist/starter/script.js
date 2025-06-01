@@ -190,6 +190,11 @@ btnClose.addEventListener('click', function (e) {
       acc => acc.username === currentAccount.username
     );
 
+    // Delete account
+    containerApp.style.opacity = 0;
+
     accounts.splice(index, 1);
   }
+
+  inputCloseUsername.value = inputClosePin.value = '';
 });
