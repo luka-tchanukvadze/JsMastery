@@ -293,3 +293,8 @@ GOOD LUCK 😀
 // for (const acc of accounts) {
 //   if (acc.owner === 'Jessica Davis') console.log(acc);
 // }
+
+console.log(movements);
+
+const lastWithdrawal = movements.findLast(mov => mov < 0);
+console.log(lastWithdrawal);
