@@ -294,17 +294,17 @@ GOOD LUCK 😀
 //   if (acc.owner === 'Jessica Davis') console.log(acc);
 // }
 
-console.log(movements);
+// console.log(movements);
 
-const lastWithdrawal = movements.findLast(mov => mov < 0);
-console.log(lastWithdrawal);
+// const lastWithdrawal = movements.findLast(mov => mov < 0);
+// console.log(lastWithdrawal);
 
-const latestsLargeMovementIndex = movements.findLastIndex(
-  mov => Math.abs(mov) > 1000
-);
-console.log(latestsLargeMovementIndex);
-console.log(
-  `Your latest large movements was ${
-    movements.length - latestsLargeMovementIndex - 1
-  } movements ago`
-);
+// const latestsLargeMovementIndex = movements.findLastIndex(
+//   mov => Math.abs(mov) > 1000
+// );
+// console.log(latestsLargeMovementIndex);
+// console.log(
+//   `Your latest large movements was ${
+//     movements.length - latestsLargeMovementIndex - 1
+//   } movements ago`
+// );
