@@ -308,3 +308,9 @@ GOOD LUCK 😀
 //     movements.length - latestsLargeMovementIndex - 1
 //   } movements ago`
 // );
+
+console.log(movements);
+console.log(movements.some(mov => mov === -130));
+
+const anyDeposits = movements.some(mov => mov > 500);
+console.log(anyDeposits);
