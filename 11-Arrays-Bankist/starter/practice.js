@@ -314,3 +314,12 @@ console.log(movements.some(mov => mov === -130));
 
 const anyDeposits = movements.some(mov => mov > 500);
 console.log(anyDeposits);
+
+// every
+console.log(movements.every(mov => mov > 0));
+
+// Separate callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
