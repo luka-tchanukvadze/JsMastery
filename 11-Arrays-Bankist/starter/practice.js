@@ -492,22 +492,42 @@ const oaccounts = [oaccount1, oaccount2, oaccount3, oaccount4];
 
 // console.log(movements);
 
-const groupedMovements = Object.groupBy(movements, movement =>
-  movement > 0 ? 'deposits' : 'withdrawals'
-);
-// console.log(groupedMovements);
+// const groupedMovements = Object.groupBy(movements, movement =>
+//   movement > 0 ? 'deposits' : 'withdrawals'
+// );
+// // console.log(groupedMovements);
 
-const groupedByActivity = Object.groupBy(oaccounts, account => {
-  const movementCount = account.movements.length;
+// const groupedByActivity = Object.groupBy(oaccounts, account => {
+//   const movementCount = account.movements.length;
 
-  if (movementCount >= 8) return 'very active';
-  if (movementCount >= 4) return 'active';
-  if (movementCount >= 1) return 'moderate';
-  return 'inactive';
+//   if (movementCount >= 8) return 'very active';
+//   if (movementCount >= 4) return 'active';
+//   if (movementCount >= 1) return 'moderate';
+//   return 'inactive';
+// });
+
+// // console.log(groupedByActivity);
+
+// // const groupedAccounts = Object.groupBy(oaccounts, account => account.type);
+// const groupedAccounts = Object.groupBy(oaccounts, ({ type }) => type);
+// console.log(groupedAccounts);
+
+const x = new Array(7);
+// only fill will work
+// x.fill(1);
+x.fill(1, 3, 5);
+console.log(x);
+
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value')
+  );
+  console.log(movementsUI.map(el => Number(el.textContent.replace('a', ''))));
 });
-
-// console.log(groupedByActivity);
-
-// const groupedAccounts = Object.groupBy(oaccounts, account => account.type);
-const groupedAccounts = Object.groupBy(oaccounts, ({ type }) => type);
-console.log(groupedAccounts);
