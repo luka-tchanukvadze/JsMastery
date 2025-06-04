@@ -423,24 +423,35 @@ TEST DATA:
 
 // console.log(fetchBreeds);
 
-const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
-console.log(arr.flat());
+// const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+// console.log(arr.flat());
 
-const arrDeep = [[[1, 2], 3], [4, 5, 6], 7, 8];
-// console.log(arrDeep.flat());
-console.log(arrDeep.flat(2));
+// const arrDeep = [[[1, 2], 3], [4, 5, 6], 7, 8];
+// // console.log(arrDeep.flat());
+// console.log(arrDeep.flat(2));
 
-const accountMovements = accounts.map(acc => acc.movements);
-console.log(accountMovements);
+// const accountMovements = accounts.map(acc => acc.movements);
+// console.log(accountMovements);
 
-const allMovements = accountMovements.flat();
-console.log(allMovements);
+// const allMovements = accountMovements.flat();
+// console.log(allMovements);
 
-const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
-console.log(overalBalance);
+// const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(overalBalance);
 
-const overalBalance2 = accounts
-  // .map(acc => acc.movements).flat()
-  .flatMap(acc => acc.movements)
-  .reduce((acc, mov) => acc + mov, 0);
-console.log(overalBalance);
+// const overalBalance2 = accounts
+//   // .map(acc => acc.movements).flat()
+//   .flatMap(acc => acc.movements)
+//   .reduce((acc, mov) => acc + mov, 0);
+// console.log(overalBalance);
+
+// strings
+const owners = ['jonas', 'zach', 'adam'];
+console.log(owners.sort());
+
+// numbers
+console.log(movements);
+console.log(movements.sort());
+
+movements.sort((a, b) => b - a);
+console.log(movements);
