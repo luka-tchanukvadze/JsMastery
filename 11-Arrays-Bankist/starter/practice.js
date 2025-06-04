@@ -512,22 +512,36 @@ const oaccounts = [oaccount1, oaccount2, oaccount3, oaccount4];
 // const groupedAccounts = Object.groupBy(oaccounts, ({ type }) => type);
 // console.log(groupedAccounts);
 
-const x = new Array(7);
-// only fill will work
-// x.fill(1);
-x.fill(1, 3, 5);
-console.log(x);
+// const x = new Array(7);
+// // only fill will work
+// // x.fill(1);
+// x.fill(1, 3, 5);
+// console.log(x);
 
-// Array.from
-const y = Array.from({ length: 7 }, () => 1);
-console.log(y);
+// // Array.from
+// const y = Array.from({ length: 7 }, () => 1);
+// console.log(y);
 
-const z = Array.from({ length: 7 }, (_, i) => i + 1);
-console.log(z);
+// const z = Array.from({ length: 7 }, (_, i) => i + 1);
+// console.log(z);
 
-labelBalance.addEventListener('click', function () {
-  const movementsUI = Array.from(
-    document.querySelectorAll('.movements__value')
-  );
-  console.log(movementsUI.map(el => Number(el.textContent.replace('a', ''))));
-});
+// labelBalance.addEventListener('click', function () {
+//   const movementsUI = Array.from(
+//     document.querySelectorAll('.movements__value')
+//   );
+//   console.log(movementsUI.map(el => Number(el.textContent.replace('a', ''))));
+// });
+
+console.log(movements);
+// const revesedMov = movements.reverse();
+const revesedMov = toReversed();
+console.log(revesedMov);
+
+// toSroted (sort), toSpliced (splice)
+
+// new (with)
+// movements[1] = 2000
+// console.log(movements);
+const newMovements = movements.with(1, 2000);
+
+console.log(newMovements);
