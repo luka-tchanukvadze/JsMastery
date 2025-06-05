@@ -532,16 +532,16 @@ const oaccounts = [oaccount1, oaccount2, oaccount3, oaccount4];
 //   console.log(movementsUI.map(el => Number(el.textContent.replace('a', ''))));
 // });
 
-console.log(movements);
-// const revesedMov = movements.reverse();
-const revesedMov = toReversed();
-console.log(revesedMov);
-
-// toSroted (sort), toSpliced (splice)
-
-// new (with)
-// movements[1] = 2000
 // console.log(movements);
-const newMovements = movements.with(1, 2000);
+// // const revesedMov = movements.reverse();
+// const revesedMov = toReversed();
+// console.log(revesedMov);
 
-console.log(newMovements);
+// // toSroted (sort), toSpliced (splice)
+
+// // new (with)
+// // movements[1] = 2000
+// // console.log(movements);
+// const newMovements = movements.with(1, 2000);
+
+// console.log(newMovements);
