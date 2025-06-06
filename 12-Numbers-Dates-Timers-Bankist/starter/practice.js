@@ -41,3 +41,15 @@ const randomInt = (min, max) =>
 
 console.log(randomInt(10, 20));
 randomInt(0, 3);
+
+// Rounding integers
+console.log(Math.trunc(23.3));
+console.log(Math.round(23.3));
+console.log(Math.ceil(23.3));
+console.log(Math.floor(23.3));
+
+// rounding decimals
+console.log((2.5).toFixed(0));
+console.log((2.5).toFixed(1));
+console.log((2.5).toFixed(2));
+console.log(+(2.5).toFixed(2));
