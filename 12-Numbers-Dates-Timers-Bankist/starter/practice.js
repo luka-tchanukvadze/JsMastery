@@ -76,13 +76,33 @@
 // numeric separators
 
 // 324,323,323
-const diameter = 3_242_000_000;
-console.log(diameter);
+// const diameter = 3_242_000_000;
+// console.log(diameter);
 
-const priceCents = 345_99;
-console.log(priceCents);
+// const priceCents = 345_99;
+// console.log(priceCents);
 
-const ransferFee = 15_00;
+// const ransferFee = 15_00;
 
-console.log(Number('23_000'));
-console.log(Number('23000'));
+// console.log(Number('23_000'));
+// console.log(Number('23000'));
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 0);
+
+console.log(44444444444444423432432432432432432n);
+console.log(BigInt(322222222222222222222222222222222222222224n));
+
+//operations
+console.log(432432n + 3232432n);
+
+const num = 23;
+const huge = 34329493294932n;
+// console.log(huge * num);
+console.log(huge * BigInt(num));
+
+console.log(20n > 15);
+console.log(20n == 20);
+console.log(20n === 20);
