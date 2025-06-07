@@ -24,32 +24,51 @@
 // console.log(Number.isInteger(23.0));
 // console.log(Number.isInteger(23.1));
 
-console.log(Math.sqrt(25));
-console.log(25 ** (1 / 2));
-console.log(8 ** (1 / 3));
+// console.log(Math.sqrt(25));
+// console.log(25 ** (1 / 2));
+// console.log(8 ** (1 / 3));
 
-console.log(Math.max(5, 234, 23, 52));
-console.log(Math.max(5, 234, 23, 52, '23px'));
-console.log(Math.min(5, 234, 23, 52));
+// console.log(Math.max(5, 234, 23, 52));
+// console.log(Math.max(5, 234, 23, 52, '23px'));
+// console.log(Math.min(5, 234, 23, 52));
 
-console.log(Math.PI * Number.parseFloat('10px') ** 2);
+// console.log(Math.PI * Number.parseFloat('10px') ** 2);
 
-console.log(Math.trunc(Math.random() * 6) + 1);
+// console.log(Math.trunc(Math.random() * 6) + 1);
 
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1)) + min;
 
-console.log(randomInt(10, 20));
-randomInt(0, 3);
+// console.log(randomInt(10, 20));
+// randomInt(0, 3);
 
-// Rounding integers
-console.log(Math.trunc(23.3));
-console.log(Math.round(23.3));
-console.log(Math.ceil(23.3));
-console.log(Math.floor(23.3));
+// // Rounding integers
+// console.log(Math.trunc(23.3));
+// console.log(Math.round(23.3));
+// console.log(Math.ceil(23.3));
+// console.log(Math.floor(23.3));
 
-// rounding decimals
-console.log((2.5).toFixed(0));
-console.log((2.5).toFixed(1));
-console.log((2.5).toFixed(2));
-console.log(+(2.5).toFixed(2));
+// // rounding decimals
+// console.log((2.5).toFixed(0));
+// console.log((2.5).toFixed(1));
+// console.log((2.5).toFixed(2));
+// console.log(+(2.5).toFixed(2));
+
+// The rimainer operator
+console.log(5 % 2);
+console.log(8 % 3);
+console.log(8 % 2);
+
+console.log(6 % 2);
+console.log(7 % 2);
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(2));
+console.log(isEven(3));
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('movements__row')];
+  array.forEach((row, i) => {
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+  });
+});
