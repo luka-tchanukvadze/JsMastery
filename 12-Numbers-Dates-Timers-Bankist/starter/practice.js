@@ -55,20 +55,34 @@
 // console.log(+(2.5).toFixed(2));
 
 // The rimainer operator
-console.log(5 % 2);
-console.log(8 % 3);
-console.log(8 % 2);
+// console.log(5 % 2);
+// console.log(8 % 3);
+// console.log(8 % 2);
 
-console.log(6 % 2);
-console.log(7 % 2);
+// console.log(6 % 2);
+// console.log(7 % 2);
 
-const isEven = n => n % 2 === 0;
-console.log(isEven(2));
-console.log(isEven(3));
+// const isEven = n => n % 2 === 0;
+// console.log(isEven(2));
+// console.log(isEven(3));
 
-labelBalance.addEventListener('click', function () {
-  [...document.querySelectorAll('movements__row')];
-  array.forEach((row, i) => {
-    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
-  });
-});
+// labelBalance.addEventListener('click', function () {
+//   [...document.querySelectorAll('movements__row')];
+//   array.forEach((row, i) => {
+//     if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+//   });
+// });
+
+// numeric separators
+
+// 324,323,323
+const diameter = 3_242_000_000;
+console.log(diameter);
+
+const priceCents = 345_99;
+console.log(priceCents);
+
+const ransferFee = 15_00;
+
+console.log(Number('23_000'));
+console.log(Number('23000'));
