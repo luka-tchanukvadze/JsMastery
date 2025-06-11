@@ -84,7 +84,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
-  const combinedMOvsDates = acc.movements.map((mov, i) => ({
+  const combinedMovsDates = acc.movements.map((mov, i) => ({
     movement: mov,
     movementDate: acc.movementsDates.at(i),
   }));
@@ -95,7 +95,7 @@ const displayMovements = function (acc, sort = false) {
   //   ? acc.movements.slice().sort((a, b) => a - b)
   //   : acc.movements;
 
-  acc.movements.forEach(function (obj, i) {
+  combinedMovsDates.forEach(function (obj, i) {
     const { movement, movementDate } = obj;
     const type = movement > 0 ? 'deposit' : 'withdrawal';
 
@@ -112,7 +112,7 @@ const displayMovements = function (acc, sort = false) {
       i + 1
     } ${type}</div>
         <div class="movements__date">${displayDate}</div>
-        <div class="movements__value">$ {movement.toFixed(2)}€</div>
+        <div class="movements__value">${movement.toFixed(2)}€</div>
       </div>
     `;
 
