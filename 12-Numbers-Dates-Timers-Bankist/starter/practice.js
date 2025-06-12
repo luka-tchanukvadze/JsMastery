@@ -120,13 +120,26 @@
 // const days1 = calcDaysPassed(new Date(2037, 10, 14), new Date(2037, 10, 24));
 // console.log(days1);
 
-const num = 42424.23;
+// const num = 42424.23;
 
-const options = {
-  // style: 'unit',
-  style: 'currency',
-  unit: 'mile-per-hour',
-  currency: 'EUR',
-};
+// const options = {
+//   // style: 'unit',
+//   style: 'currency',
+//   unit: 'mile-per-hour',
+//   currency: 'EUR',
+// };
 
-console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
+// console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
+
+const ingredients = ['olidves', 'spicanh'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => {
+    console.log('here is your pizza', ing1, ing2);
+  },
+  3000,
+  ...ingredients
+);
+
+console.log('Waiting...');
+
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
