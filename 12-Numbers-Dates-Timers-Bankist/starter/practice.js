@@ -120,11 +120,13 @@
 // const days1 = calcDaysPassed(new Date(2037, 10, 14), new Date(2037, 10, 24));
 // console.log(days1);
 
-const num = 432424.23;
+const num = 42424.23;
 
 const options = {
-  style: 'unit',
+  // style: 'unit',
+  style: 'currency',
   unit: 'mile-per-hour',
+  currency: 'EUR',
 };
 
-console.log('US: ', new Intl.NumberFormat(('en-US', options).format(num)));
+console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
