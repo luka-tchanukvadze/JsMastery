@@ -131,7 +131,9 @@
 
 // console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
 
-const ingredients = ['olidves', 'spicanh'];
+// setTimeout
+// const ingredients = ['olives', '/'];
+const ingredients = ['olives', 'spinach'];
 const pizzaTimer = setTimeout(
   (ing1, ing2) => {
     console.log('here is your pizza', ing1, ing2);
@@ -143,3 +145,9 @@ const pizzaTimer = setTimeout(
 console.log('Waiting...');
 
 if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+
+// setInterval
+setInterval(() => {
+  const now = new Date();
+  console.log(now);
+}, 1000);
