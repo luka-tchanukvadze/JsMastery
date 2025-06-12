@@ -133,21 +133,21 @@
 
 // setTimeout
 // const ingredients = ['olives', '/'];
-const ingredients = ['olives', 'spinach'];
-const pizzaTimer = setTimeout(
-  (ing1, ing2) => {
-    console.log('here is your pizza', ing1, ing2);
-  },
-  3000,
-  ...ingredients
-);
+// const ingredients = ['olives', 'spinach'];
+// const pizzaTimer = setTimeout(
+//   (ing1, ing2) => {
+//     console.log('here is your pizza', ing1, ing2);
+//   },
+//   3000,
+//   ...ingredients
+// );
 
-console.log('Waiting...');
+// console.log('Waiting...');
 
-if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+// if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 
-// setInterval
-setInterval(() => {
-  const now = new Date();
-  console.log(now);
-}, 1000);
+// // setInterval
+// setInterval(() => {
+//   const now = new Date();
+//   console.log(now);
+// }, 1000);
