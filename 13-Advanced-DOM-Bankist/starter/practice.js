@@ -33,3 +33,31 @@ document
   .addEventListener('click', function () {
     message.remove();
   });
+
+// Styles
+message.style.backgroundColor = '#fff';
+message.style.width = '120%';
+
+console.log(message.style.height);
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height) + 30 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('company', 'bankist');
+
+logo.src;
+logo.getAttribute('src');
+
+// data attributes
+console.log(logo.CDATA_SECTION_NODE.versionNumber);
