@@ -37,16 +37,5 @@ const sectoin1 = document.querySelector('#section--1');
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = sectoin1.getBoundingClientRect();
 
-  // window.scrollTo(
-  //   s1coords.left + window.pageXOffset,
-  //   s1coords.top + window.pageYOffset
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behaviour: 'smooth',
-  // });
-
   sectoin1.scrollIntoView({ behavior: 'smooth' });
 });
