@@ -62,20 +62,20 @@
 // // data attributes
 // console.log(logo.CDATA_SECTION_NODE.versionNumber);
 
-const h1 = document.querySelector('h1');
+// const h1 = document.querySelector('h1');
 
-const alerth1 = function (e) {
-  alert('addeventlistener, great');
+// const alerth1 = function (e) {
+//   alert('addeventlistener, great');
 
-  // intresting
-  // h1.removeEventListener('mouseenter', alerth1);
-};
+//   // intresting
+//   // h1.removeEventListener('mouseenter', alerth1);
+// };
 
-h1.addEventListener('mouseenter', alerth1);
+// h1.addEventListener('mouseenter', alerth1);
 
-setTimeout(() => {
-  h1.removeEventListener('mouseenter', alerth1);
-}, 3000);
+// setTimeout(() => {
+//   h1.removeEventListener('mouseenter', alerth1);
+// }, 3000);
 
 // h1.onmouseenter = function (e) {
 //   alert('damn');
