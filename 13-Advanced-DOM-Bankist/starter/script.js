@@ -7,6 +7,8 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const sectoin1 = document.querySelector('#section--1');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -31,11 +33,32 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const sectoin1 = document.querySelector('#section--1');
-
+// Button scrolling
 btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = sectoin1.getBoundingClientRect();
-
   sectoin1.scrollIntoView({ behavior: 'smooth' });
+});
+
+///////////////////////////////
+// page navigation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
