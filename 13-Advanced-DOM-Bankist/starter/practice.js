@@ -103,26 +103,26 @@
 //   console.log('nav', e.target);
 // });
 
-const h1 = document.querySelector('h1');
-// going downwards: child
-console.log(h1.querySelectorAll('.highlight'));
-console.log(h1.childNodes);
-console.log(h1.children);
-// h1.firstElementChild.style.color = 'white';
-// h1.lastElementChild.style.color = 'black';
+// const h1 = document.querySelector('h1');
+// // going downwards: child
+// console.log(h1.querySelectorAll('.highlight'));
+// console.log(h1.childNodes);
+// console.log(h1.children);
+// // h1.firstElementChild.style.color = 'white';
+// // h1.lastElementChild.style.color = 'black';
 
-// Going upwards: parents
-console.log(h1.parentNode);
-console.log(h1.parentElement);
+// // Going upwards: parents
+// console.log(h1.parentNode);
+// console.log(h1.parentElement);
 
-// h1.closest('.header').style.background = '...';
+// // h1.closest('.header').style.background = '...';
 
-// Going sideways: siblings
-console.log(h1.previousElementSibling);
-console.log(h1.nextElementSibling);
+// // Going sideways: siblings
+// console.log(h1.previousElementSibling);
+// console.log(h1.nextElementSibling);
 
-console.log(h1.previousSibling);
-console.log(h1.nextSibling);
+// console.log(h1.previousSibling);
+// console.log(h1.nextSibling);
 
 // console.log(h1.parentElement.children);
 // [...h1.parentElement.children].forEach(function (el) {
