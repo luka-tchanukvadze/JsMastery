@@ -110,32 +110,6 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 // Sticky navigation
 
-// const initialCoords = sectoin1.getBoundingClientRect();
-
-// window.addEventListener('scroll', function () {
-//   // console.log(this.window.scrollY);
-
-//   if (window.scrollY > initialCoords.top) {
-//     nav.classList.add('sticky');
-//   } else {
-//     nav.classList.remove('sticky');
-//   }
-// });
-
-// const obsCallback = function (entires, observer) {
-//   entires.forEach(entry => {
-//     console.log(entry);
-//   });
-// };
-
-// const obsOptions = {
-//   root: null,
-//   threshold: [0, 0.2],
-// };
-
-// const observer = new IntersectionObserver(obsCallback, obsOptions);
-// observer.observe(sectoin1);
-
 const stickyNav = function (entries) {
   const [entry] = entries;
   // console.log(entry);
