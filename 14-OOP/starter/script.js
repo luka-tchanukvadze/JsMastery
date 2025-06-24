@@ -27,4 +27,24 @@ console.log(luka);
 const matilda = new Person('matilda', 2034);
 console.log(matilda);
 
-console.log(jonas instanceof Person);
+console.log(luka instanceof Person);
+
+// Prototypes
+Person.prototype.calcAge = function () {
+  console.log(2045 - this.birthYear);
+};
+
+luka.calcAge();
+
+console.log(luka.__proto__);
+console.log(luka.__proto__ === Person.prototype);
+
+console.log(Person.prototype.isPrototypeOf(luka));
+console.log(Person.prototype.isPrototypeOf(Person));
+
+Person.prototype.species = 'Homo Sapiens';
+console.log(luka.species, matilda);
+
+console.log('////');
+console.log(luka.hasOwnProperty('firstName'));
+console.log(luka.hasOwnProperty('species'));
