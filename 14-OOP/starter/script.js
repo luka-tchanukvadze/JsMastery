@@ -13,7 +13,7 @@ const Person = function (firstName, birthYear) {
 };
 
 const luka = new Person('luka', 203);
-console.log(luka);
+// console.log(luka);
 
 /* 
 
@@ -25,26 +25,40 @@ console.log(luka);
 */
 
 const matilda = new Person('matilda', 2034);
-console.log(matilda);
+// console.log(matilda);
 
-console.log(luka instanceof Person);
+// console.log(luka instanceof Person);
 
 // Prototypes
 Person.prototype.calcAge = function () {
   console.log(2045 - this.birthYear);
 };
 
-luka.calcAge();
+// luka.calcAge();
 
-console.log(luka.__proto__);
-console.log(luka.__proto__ === Person.prototype);
+// console.log(luka.__proto__);
+// console.log(luka.__proto__ === Person.prototype);
 
-console.log(Person.prototype.isPrototypeOf(luka));
-console.log(Person.prototype.isPrototypeOf(Person));
+// console.log(Person.prototype.isPrototypeOf(luka));
+// console.log(Person.prototype.isPrototypeOf(Person));
 
 Person.prototype.species = 'Homo Sapiens';
-console.log(luka.species, matilda);
+// console.log(luka.species, matilda);
 
-console.log('////');
-console.log(luka.hasOwnProperty('firstName'));
-console.log(luka.hasOwnProperty('species'));
+// console.log('////');
+// console.log(luka.hasOwnProperty('firstName'));
+// console.log(luka.hasOwnProperty('species'));
+
+////////////////////
+//Object.prototype (top of prototype chain)
+console.log(luka.__proto__.__proto__);
+
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.__proto__);
+console.log(arr.__proto__ === Array.prototype);
+
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+
+console.log(arr.unique());
