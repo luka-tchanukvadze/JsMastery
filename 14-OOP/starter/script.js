@@ -132,61 +132,83 @@ const PersonCl = class{}
 // // 3. Classes are executed in strict mode
 
 ///////////////////////////// getters and setters
-const account = {
-  owner: 'luka',
-  movements: [123, 213, 4324],
+// const account = {
+//   owner: 'luka',
+//   movements: [123, 213, 4324],
 
-  get latest() {
-    return this.movements.slice(-1).pop();
+//   get latest() {
+//     return this.movements.slice(-1).pop();
+//   },
+
+//   set latest(mov) {
+//     this.movements.push(mov);
+//   },
+// };
+
+// console.log(account.latest);
+// account.latest = 50;
+
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
+
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
+
+//   greet() {
+//     console.log(`Hey ${this.fullName}`);
+//   }
+
+//   get age() {
+//     return 2037 - this.birthYear;
+//   }
+
+//   // Set a property that already exists
+//   set fullName(name) {
+//     console.log(name);
+//     if (name.includes(' ')) {
+//       this._fullName = name;
+//     } else {
+//       alert(`${name} is not a full name!`);
+//     }
+//   }
+
+//   get fullName() {
+//     return this._fullName;
+//   }
+
+//   // Static method
+//   static hey() {
+//     console.log('hey');
+//   }
+// }
+
+// const jessica = new PersonCl('Jessica', 1996);
+// // console.log(jessica);
+// // jessica.greet();
+// console.log(jessica.age);
+
+const PersonProto = {
+  calcAge() {
+    console.log(2047 - this.birthYear);
   },
 
-  set latest(mov) {
-    this.movements.push(mov);
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
   },
 };
+const steven = Object.create(PersonProto);
+console.log(steven);
+steven.name = 'Steven';
+steven.birthYear = 2003;
+steven.calcAge();
 
-console.log(account.latest);
-account.latest = 50;
+console.log(steven.__proto__);
 
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
-
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  }
-
-  greet() {
-    console.log(`Hey ${this.fullName}`);
-  }
-
-  get age() {
-    return 2037 - this.birthYear;
-  }
-
-  // Set a property that already exists
-  set fullName(name) {
-    console.log(name);
-    if (name.includes(' ')) {
-      this._fullName = name;
-    } else {
-      alert(`${name} is not a full name!`);
-    }
-  }
-
-  get fullName() {
-    return this._fullName;
-  }
-
-  // Static method
-  static hey() {
-    console.log('hey');
-  }
-}
-
-const jessica = new PersonCl('Jessica', 1996);
-// console.log(jessica);
-// jessica.greet();
-console.log(jessica.age);
+const sarah = Object.create(PersonProto);
+sarah.init('Sarah', 2304);
+sarah.calcAge();
