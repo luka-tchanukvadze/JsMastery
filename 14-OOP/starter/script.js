@@ -339,61 +339,89 @@ GOOD LUCK 😀
 // tesla.brake();
 // tesla.accelerate();
 
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
 
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
+
+//   greet() {
+//     console.log(`Hey ${this.fullName}`);
+//   }
+
+//   get age() {
+//     return 2037 - this.birthYear;
+//   }
+
+//   // Set a property that already exists
+//   set fullName(name) {
+//     console.log(name);
+//     if (name.includes(' ')) {
+//       this._fullName = name;
+//     } else {
+//       alert(`${name} is not a full name!`);
+//     }
+//   }
+
+//   get fullName() {
+//     return this._fullName;
+//   }
+
+//   // Static method
+//   static hey() {
+//     console.log('hey');
+//   }
+// }
+
+// class StudentCl extends PersonCl {
+//   constructor(fullName, birthYear, course) {
+//     // Always needs to happen first!
+//     super(fullName, birthYear);
+
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     console.log('Hello there!');
+//   }
+
+//   calcAge() {
+//     console.log('overwrite');
+//   }
+// }
+
+// const martha = new StudentCl('martha a', 2012, 'IT');
+// martha.introduce();
+// martha.calcAge();
+
+const PersonProto = {
   calcAge() {
     console.log(2037 - this.birthYear);
-  }
+  },
 
-  greet() {
-    console.log(`Hey ${this.fullName}`);
-  }
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
 
-  get age() {
-    return 2037 - this.birthYear;
-  }
+const steven = Object.create(PersonProto);
 
-  // Set a property that already exists
-  set fullName(name) {
-    console.log(name);
-    if (name.includes(' ')) {
-      this._fullName = name;
-    } else {
-      alert(`${name} is not a full name!`);
-    }
-  }
+const StudentProto = Object.create(PersonProto);
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
 
-  get fullName() {
-    return this._fullName;
-  }
+StudentProto.introduce = function () {
+  console.log('hey');
+};
 
-  // Static method
-  static hey() {
-    console.log('hey');
-  }
-}
-
-class StudentCl extends PersonCl {
-  constructor(fullName, birthYear, course) {
-    // Always needs to happen first!
-    super(fullName, birthYear);
-
-    this.course = course;
-  }
-
-  introduce() {
-    console.log('Hello there!');
-  }
-
-  calcAge() {
-    console.log('overwrite');
-  }
-}
-
-const martha = new StudentCl('martha a', 2012, 'IT');
-martha.introduce();
-martha.calcAge();
+const jay = Object.create(StudentProto);
+jay.init('Jay', 2010, 'it');
+jay.introduce();
+jay.calcAge();
