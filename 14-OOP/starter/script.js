@@ -479,6 +479,52 @@ GOOD LUCK 😀
 // 4) Private methods
 // STATIC  version of these 4
 
+// class Account {
+//   locale = navigator.language;
+//   bank = 'Bankist';
+//   #movements = [];
+//   #pin;
+
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this.#pin = pin;
+
+//     console.log(`Thanks for opening an account, ${owner}`);
+//   }
+
+//   // Public interface (API)
+//   getMovements() {
+//     return this.#movements;
+//   }
+
+//   deposit(val) {
+//     this.#movements.push(val);
+//   }
+
+//   withdraw(val) {
+//     this.deposit(-val);
+//   }
+
+//   #approveLoan(val) {
+//     // FAKE METHOD
+//     return true;
+//   }
+
+//   requestLoan(val) {
+//     if (this.#approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`Loan approved`);
+//     }
+//   }
+// }
+
+// const acc1 = new Account('luka', 'eur', 1111);
+// acc1.deposit(300);
+// // acc1.movements = [];
+
+// console.log(acc1);
+
 class Account {
   locale = navigator.language;
   bank = 'Bankist';
@@ -496,14 +542,17 @@ class Account {
   // Public interface (API)
   getMovements() {
     return this.#movements;
+    // Not chainable. it should be the last one
   }
 
   deposit(val) {
     this.#movements.push(val);
+    return this;
   }
 
   withdraw(val) {
     this.deposit(-val);
+    return this;
   }
 
   #approveLoan(val) {
@@ -516,11 +565,17 @@ class Account {
       this.deposit(val);
       console.log(`Loan approved`);
     }
+    return this;
   }
 }
 
 const acc1 = new Account('luka', 'eur', 1111);
-acc1.deposit(300);
-// acc1.movements = [];
+acc1
+  .deposit(300)
+  .withdraw(100)
+  .withdraw(50)
+  .requestLoan(25000)
+  .withdraw(4000)
+  .getMovements();
 
 console.log(acc1);
