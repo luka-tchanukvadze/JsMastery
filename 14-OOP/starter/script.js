@@ -525,57 +525,57 @@ GOOD LUCK 😀
 
 // console.log(acc1);
 
-class Account {
-  locale = navigator.language;
-  bank = 'Bankist';
-  #movements = [];
-  #pin;
+// class Account {
+//   locale = navigator.language;
+//   bank = 'Bankist';
+//   #movements = [];
+//   #pin;
 
-  constructor(owner, currency, pin) {
-    this.owner = owner;
-    this.currency = currency;
-    this.#pin = pin;
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this.#pin = pin;
 
-    console.log(`Thanks for opening an account, ${owner}`);
-  }
+//     console.log(`Thanks for opening an account, ${owner}`);
+//   }
 
-  // Public interface (API)
-  getMovements() {
-    return this.#movements;
-    // Not chainable. it should be the last one
-  }
+//   // Public interface (API)
+//   getMovements() {
+//     return this.#movements;
+//     // Not chainable. it should be the last one
+//   }
 
-  deposit(val) {
-    this.#movements.push(val);
-    return this;
-  }
+//   deposit(val) {
+//     this.#movements.push(val);
+//     return this;
+//   }
 
-  withdraw(val) {
-    this.deposit(-val);
-    return this;
-  }
+//   withdraw(val) {
+//     this.deposit(-val);
+//     return this;
+//   }
 
-  #approveLoan(val) {
-    // FAKE METHOD
-    return true;
-  }
+//   #approveLoan(val) {
+//     // FAKE METHOD
+//     return true;
+//   }
 
-  requestLoan(val) {
-    if (this.#approveLoan(val)) {
-      this.deposit(val);
-      console.log(`Loan approved`);
-    }
-    return this;
-  }
-}
+//   requestLoan(val) {
+//     if (this.#approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`Loan approved`);
+//     }
+//     return this;
+//   }
+// }
 
-const acc1 = new Account('luka', 'eur', 1111);
-acc1
-  .deposit(300)
-  .withdraw(100)
-  .withdraw(50)
-  .requestLoan(25000)
-  .withdraw(4000)
-  .getMovements();
+// const acc1 = new Account('luka', 'eur', 1111);
+// acc1
+//   .deposit(300)
+//   .withdraw(100)
+//   .withdraw(50)
+//   .requestLoan(25000)
+//   .withdraw(4000)
+//   .getMovements();
 
-console.log(acc1);
+// console.log(acc1);
