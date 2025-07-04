@@ -41,3 +41,5 @@ const getCountryData = function (country) {
 
 getCountryData('portugal');
 getCountryData('usa');
+
+// theory lesson
