@@ -28,6 +28,7 @@ const renderCountry = function (data, className = '') {
   `;
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
+  countriesContainer.style.opacity = 1;
 };
 
 const renderError = function (msg) {

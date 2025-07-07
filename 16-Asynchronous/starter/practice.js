@@ -154,48 +154,79 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 
 GOOD LUCK 😀
 */
-const imgContaienr = document.querySelector('.images');
+// const imgContaienr = document.querySelector('.images');
 
-const wait = function (seconds) {
-  return new Promise(function (resolve) {
-    setTimeout(resolve, seconds * 1000);
-  });
-};
+// const wait = function (seconds) {
+//   return new Promise(function (resolve) {
+//     setTimeout(resolve, seconds * 1000);
+//   });
+// };
 
-const createImage = function (imgPath) {
+// const createImage = function (imgPath) {
+//   return new Promise(function (resolve, reject) {
+//     const img = document.createElement('img');
+//     img.src = imgPath;
+
+//     img.addEventListener('load', function () {
+//       imgContaienr.append(img);
+//       resolve(img);
+//     });
+
+//     img.addEventListener('error', function () {
+//       reject(new Error('img not found'));
+//     });
+//   });
+// };
+
+// let currentImg;
+
+// createImage('img/img-1.jpg')
+//   .then(img => {
+//     currentImg = img;
+//     console.log('image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg');
+//   })
+//   .then(img => {
+//     currentImg = img;
+//     console.log('image 1 loaded');
+//     return wait(2);
+//   })
+//   .then(() => {
+//     currentImg.style.display = 'none';
+//   })
+//   .catch(err => console.error(err));
+
+const getPosition = function () {
   return new Promise(function (resolve, reject) {
-    const img = document.createElement('img');
-    img.src = imgPath;
-
-    img.addEventListener('load', function () {
-      imgContaienr.append(img);
-      resolve(img);
-    });
-
-    img.addEventListener('error', function () {
-      reject(new Error('img not found'));
-    });
+    navigator.geolocation.getCurrentPosition(resolve, reject);
   });
 };
 
-let currentImg;
+const whereAmI = async function () {
+  // Geolocation
+  const pos = await getPosition();
+  const { latitude: lat, longitude: lng } = pos.coords;
 
-createImage('img/img-1.jpg')
-  .then(img => {
-    currentImg = img;
-    console.log('image 1 loaded');
-    return wait(2);
-  })
-  .then(() => {
-    currentImg.style.display = 'none';
-    return createImage('img/img-2.jpg');
-  })
-  .then(img => {
-    currentImg = img;
-    console.log('image 1 loaded');
-    return wait(2);
-  })
-  .then(() => {
-    currentImg.style.display = 'none';
-  })
-  .catch(err => console.error(err));
+  //  Reverse geocoding
+  const resGeo = await fetch(
+    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`
+  );
+  const dataGeo = await resGeo.json();
+  console.log(dataGeo);
+
+  // Country data
+  const res = await fetch(
+    `https://restcountries.com/v2/name/${dataGeo.countryCode}`
+  );
+
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
+};
+
+whereAmI();
+console.log('first');
