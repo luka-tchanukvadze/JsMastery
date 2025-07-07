@@ -22,26 +22,39 @@ TEST COORDINATES 2: -33.933, 18.474
 GOOD LUCK 😀
 */
 
-const whereAmI = (lat, lng) => {
-  fetch(
-    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`
-  )
-    .then(res => {
-      if (!res.ok) throw new Error('Problem with geocoding');
+// const whereAmI = (lat, lng) => {
+//   fetch(
+//     `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`
+//   )
+//     .then(res => {
+//       if (!res.ok) throw new Error('Problem with geocoding');
 
-      return res.json();
-    })
-    .then(data =>
-      fetch(`https://restcountries.com/v2/name/${data.countryName}`)
-    )
-    .then(res => {
-      if (!res.ok) throw new Error('country not found');
+//       return res.json();
+//     })
+//     .then(data =>
+//       fetch(`https://restcountries.com/v2/name/${data.countryName}`)
+//     )
+//     .then(res => {
+//       if (!res.ok) throw new Error('country not found');
 
-      return res.json();
-    })
-    .then(data => renderCountry(data[0]))
-    .catch(err => console.log(err.message))
-    .finally((countriesContainer.style.opacity = 1));
-};
+//       return res.json();
+//     })
+//     .then(data => renderCountry(data[0]))
+//     .catch(err => console.log(err.message))
+//     .finally((countriesContainer.style.opacity = 1));
+// };
 
-whereAmI(52.508, 13.381);
+// whereAmI(52.508, 13.381);
+
+console.log('test start');
+
+setTimeout(() => {
+  console.log('0 sec timer');
+}, 0);
+Promise.resolve('resolved promise 1').then(res => console.log(res));
+Promise.resolve('resolved promise 2').then(res => {
+  for (let i = 0; i < 100000000; i++) {}
+  console.log(res);
+});
+
+console.log('test end');
