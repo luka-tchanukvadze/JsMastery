@@ -46,15 +46,45 @@ GOOD LUCK 😀
 
 // whereAmI(52.508, 13.381);
 
-console.log('test start');
+// console.log('test start');
 
-setTimeout(() => {
-  console.log('0 sec timer');
-}, 0);
-Promise.resolve('resolved promise 1').then(res => console.log(res));
-Promise.resolve('resolved promise 2').then(res => {
-  for (let i = 0; i < 100000000; i++) {}
-  console.log(res);
+// setTimeout(() => {
+//   console.log('0 sec timer');
+// }, 0);
+// Promise.resolve('resolved promise 1').then(res => console.log(res));
+// Promise.resolve('resolved promise 2').then(res => {
+//   for (let i = 0; i < 100000000; i++) {}
+//   console.log(res);
+// });
+
+// console.log('test end');
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log('lotter draw is happening');
+  setTimeout(() => {
+    if (Math.random() >= 0.5) {
+      resolve('You WIN');
+    } else {
+      reject(new Error('You LOST'));
+    }
+  }, 2000);
 });
 
-console.log('test end');
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+wait(2)
+  .then(() => {
+    console.log(' i waithed for 2 seconds');
+    return wait(1);
+  })
+  .then(() => console.log('i waited for 1 second'));
+
+Promise.resolve('abc').then(x => console.log(x));
+Promise.reject('abc').catch(x => console.error(x));
