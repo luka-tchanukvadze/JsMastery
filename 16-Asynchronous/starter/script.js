@@ -147,6 +147,6 @@ const getCountryData = function (country) {
     .finally(() => (countriesContainer.style.opacity = 1));
 };
 
-btn.addEventListener('click', function () {
-  getCountryData('portugal');
-});
+// btn.addEventListener('click', function () {
+//   getCountryData('portugal');
+// });
