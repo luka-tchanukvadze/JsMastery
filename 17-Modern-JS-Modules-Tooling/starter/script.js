@@ -17,9 +17,31 @@
 // import add, { totalPrice } from './shoppingCart.js';
 // console.log(totalPrice);
 
-import add, { cart } from './shoppingCart.js';
-add('pizza', 2);
-add('apple', 2);
-add('something', 2);
+// import add, { cart } from './shoppingCart.js';
+// add('pizza', 2);
+// add('apple', 2);
+// add('something', 2);
 
-console.log(cart);
+// console.log(cart);
+
+// this is blocking module execution
+// const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+// const data = await res.json();
+// console.log(data);
+
+const getLastPost = async function () {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const data = await res.json();
+  // console.log(data);
+
+  return { title: data.at(-1).title, text: data.at(-1).body };
+};
+
+const lastPost = getLastPost();
+console.log(lastPost);
+
+// No t very clean
+// lastPost.then(last => console.log(last));
+
+const lastPost2 = await getLastPost();
+console.log(lastPost2);
