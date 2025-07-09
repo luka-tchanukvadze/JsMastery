@@ -79,4 +79,6 @@ export.addTocart = function() {
 
 // import
 const {addTocart} = require('./shoppingCart.js')
+
+command line
 */
