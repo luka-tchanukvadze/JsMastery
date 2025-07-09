@@ -29,19 +29,44 @@
 // const data = await res.json();
 // console.log(data);
 
-const getLastPost = async function () {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-  const data = await res.json();
-  // console.log(data);
+// const getLastPost = async function () {
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+//   const data = await res.json();
+//   // console.log(data);
 
-  return { title: data.at(-1).title, text: data.at(-1).body };
-};
+//   return { title: data.at(-1).title, text: data.at(-1).body };
+// };
 
-const lastPost = getLastPost();
-console.log(lastPost);
+// const lastPost = getLastPost();
+// console.log(lastPost);
 
-// No t very clean
-// lastPost.then(last => console.log(last));
+// // No t very clean
+// // lastPost.then(last => console.log(last));
 
-const lastPost2 = await getLastPost();
-console.log(lastPost2);
+// const lastPost2 = await getLastPost();
+// console.log(lastPost2);
+
+const shoppingCart2 = (function () {
+  const cart = [];
+  const shippingCost = 10;
+  const totalPrice = 2344;
+  const totalQuantity = 3;
+
+  const addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(`${quantity} ${product} added`);
+  };
+
+  const orderStock = function (product, quantity) {
+    console.log(`${quantity} ${product} order from supplier`);
+  };
+
+  return {
+    addToCart,
+    cart,
+    totalPrice,
+    totalQuantity,
+  };
+})();
+
+shoppingCart2.addToCart('apple', 3);
