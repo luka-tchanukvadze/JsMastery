@@ -92,3 +92,5 @@ import 'core-js/stable';
 
 // polifilling async functions
 import 'regenerator-runtime/runtime';
+
+// theory lecture - how to write clean and modern code
