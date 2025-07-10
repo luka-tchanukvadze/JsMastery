@@ -64,3 +64,5 @@ const logBigExpenses = function (limit) {
   console.log(output);
 };
 logBigExpenses(1000);
+
+// theory lecture
