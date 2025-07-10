@@ -86,3 +86,9 @@ command line
 if (module.hot) {
   module.hot.accept();
 }
+
+import 'core-js/stable';
+// import 'core-js/stable/array/find'
+
+// polifilling async functions
+import 'regenerator-runtime/runtime';
