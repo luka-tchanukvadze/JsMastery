@@ -82,3 +82,7 @@ const {addTocart} = require('./shoppingCart.js')
 
 command line
 */
+
+if (module.hot) {
+  module.hot.accept();
+}
