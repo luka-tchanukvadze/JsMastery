@@ -1,4 +1,4 @@
-3641
+3644
 96C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\detect-libc133967858849263064 1
 112C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\reporter-tracer\src133967858848565995 1
 134C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\Makefile133967858850630565 0
@@ -14,7 +14,7 @@
 100C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\forkify-flowchart-part-1.png133879218140767451 0
 110C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\utils\src\path.js133967858853284719 0
 116C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\data\regions\BA.js133967858852926492 0
-76C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist133967863950515893 1
+76C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist133967937286270580 1
 160C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\node-gyp-build-optional-packages\node_modules\detect-libc\lib\filesystem.js133967858848678468 0
 102C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\semver\preload.js133967858851869037 0
 137C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@swc\helpers\_\_assert_this_initialized\package.json133967858857022139 0
@@ -72,7 +72,7 @@
 110C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@swc\counter\package.json133967858848739936 0
 122C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\dist\unpacker\feature.js133967858858673693 0
 112C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\workers\src\threads133967858852228205 1
-82C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\index.html133967027458281688 0
+82C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\index.html133967868201811549 0
 107C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\README.md133967858864097007 0
 122C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\utils\src\progress-message.js133967858853376732 0
 94C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\immutable133967859700510547 1
@@ -170,7 +170,7 @@
 116C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\data\regions\ET.js133967858858673693 0
 104C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\dotenv\README-es.md133967858849829561 0
 94C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@mischnic133967858838171713 1
-92C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\src\js\controller.js133879218142678599 0
+92C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\src\js\controller.js133967937285672833 0
 128C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\type-fest\source\union-to-intersection.d.ts133967858852208153 0
 116C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\data\regions\PG.js133967858861830738 0
 156C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\index.js133967858848776701 0
@@ -490,7 +490,7 @@
 114C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\data\features.js133967858858673693 0
 124C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\utility-types\dist\utility-types.js.map133967858850146349 0
 103C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\picomatch\index.js133967858848497042 0
-97C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\favicon.8b2f57bf.png133967862942155250 0
+97C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\favicon.8b2f57bf.png133967934526686103 0
 110C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\caniuse-lite\package.json133967858864097007 0
 127C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\transformer-babel\lib\constants.js133967858850054097 0
 128C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\update-browserslist-db\check-npm-version.js133967858847890835 0
@@ -2602,7 +2602,7 @@
 110C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@swc\helpers\_\_ts_values133967858858835801 1
 108C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@swc\helpers\_\_type_of133967858858959250 1
 130C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@swc\helpers\_\_unsupported_iterable_to_array133967858858976774 1
-97C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.f7626f62.css133967863950446085 0
+97C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.f7626f62.css133967934526686103 0
 123C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\packager-js\src\.eslintrc.json133967858851015870 0
 122C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\transformer-json\package.json133967858848898913 0
 107C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@swc\helpers\_\_update133967858859003004 1
@@ -3504,7 +3504,7 @@
 128C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\core\test\fixtures\parcel\yarn.lock133967858857365353 0
 136C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\core\test\fixtures\main-global\package.json133967858857251268 0
 145C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\core\test\fixtures\main-format-mismatch\package.json133967858857251268 0
-95C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\icons.21bad73c.svg133967862942236724 0
+95C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\icons.21bad73c.svg133967934526686103 0
 150C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\core\test\fixtures\library-custom-scopehoist\package.json133967858857182119 0
 121C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\.bin\download-msgpackr-prebuilds.cmd133967858864814638 0
 155C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@parcel\core\test\fixtures\invalid-target-source-not-file\src\index.js133967858854352235 0
@@ -3611,6 +3611,7 @@
 98C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@lezer\common133967858849824519 1
 104C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@lezer\lr\README.md133967858849878030 0
 114C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@lezer\lr\dist\constants.d.ts133967858849991909 0
+96C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.4a59a05f.js133967937286270580 0
 110C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@lezer\lr\dist\index.d.ts133967858850108843 0
 103C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@lezer\common\dist133967858849917064 1
 106C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\@lezer\common\LICENSE133967858847558575 0
@@ -3633,10 +3634,12 @@
 98C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\.bin\sass.ps1133967859707057713 0
 100C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\.bin\semver.cmd133967858866013832 0
 116C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\node_modules\.bin\update-browserslist-db.cmd133967858865555389 0
-87C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\index.html133967862942124963 0
-94C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\logo.726d37a8.png133967862942114901 0
+95C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\icons.0809ef97.svg133967934526686103 0
+87C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\index.html133967934526594897 0
+94C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\logo.726d37a8.png133967934526686103 0
 96C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.3464ddca.js133967862942149062 0
 100C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.3464ddca.js.map133967862942551888 0
+100C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.4a59a05f.js.map133967937286270580 0
 96C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.62406edb.js133967862942155250 0
 100C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.62406edb.js.map133967862942551888 0
-101C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.f7626f62.css.map133967863950515893 0
+101C:\Users\lukat\OneDrive\Desktop\Full Stack\JsMastery\18-forkify\starter\dist\starter.f7626f62.css.map133967934526950650 0
