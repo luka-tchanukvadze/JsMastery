@@ -1,5 +1,5 @@
-import { API_URL, RES_PER_PAGE } from './config.js';
-import { getJSON } from './helpres.js';
+import { API_URL, KEY, RES_PER_PAGE } from './config.js';
+import { getJSON, sendJSON } from './helpres.js';
 
 export const state = {
   recipe: {},
@@ -12,21 +12,24 @@ export const state = {
   bookmarks: [],
 };
 
+const createREcipeObject = function (data) {
+  const { recipe } = data.data;
+  state.recipe = {
+    id: recipe.id,
+    title: recipe.title,
+    publisher: recipe.publisher,
+    sourceUrl: recipe.sourceUrl,
+    image: recipe.image_url,
+    servings: recipe.servings,
+    cookingTime: recipe.cooking_time,
+    ingredients: recipe.ingredients,
+  };
+};
+
 export const loadRecipe = async function (id) {
   try {
     const data = await getJSON(`${API_URL}${id}`);
-
-    const { recipe } = data.data;
-    state.recipe = {
-      id: recipe.id,
-      title: recipe.title,
-      publisher: recipe.publisher,
-      sourceUrl: recipe.sourceUrl,
-      image: recipe.image_url,
-      servings: recipe.servings,
-      cookingTime: recipe.cooking_time,
-      ingredients: recipe.ingredients,
-    };
+    state.recipe = createREcipeObject(data);
 
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
@@ -142,6 +145,9 @@ export const uploadRecipe = async function (newRecipe) {
       servings: +newRecipe.servings,
       ingredients,
     };
+
+    const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
+    state.recipe = createREcipeObject(data);
   } catch (error) {
     throw error;
   }
