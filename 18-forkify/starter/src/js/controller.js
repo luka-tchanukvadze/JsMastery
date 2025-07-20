@@ -93,6 +93,12 @@ const controlAddRecipe = async function (newRecipe) {
   try {
     // Upload the new recipe data
     await model.uploadRecipe(newRecipe);
+    recipeView.render(model.state.recipe);
+
+    // close form window
+    setTimeout(() => {
+      addRecipeView.toggleWindow();
+    }, 2000);
   } catch (error) {
     console.log(error);
     addRecipeView.renderError(error.message);
