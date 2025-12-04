@@ -772,10 +772,30 @@ GOOD LUCK 😀
 //   console.log(output);
 // }
 
-restaurant.numGuests = 0;
-const guests = restaurant.numGuests || 10;
-console.log(guests);
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
 
-// Nullish: null and undefined (NOT 0 or '')
-const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect);
+// // Nullish: null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
+const rest1 = {
+  name: 'capri',
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: 'random ',
+  ownder: 'Something',
+};
+
+// rest1.numGuests = rest1 || 10;
+rest2.numGuests = rest2 || 10;
+
+// OR assignment operator
+rest1.numGuests ||= 10;
+// NULLISH assignment operator
+rest2.numGuests ??= 10;
+
+console.log(rest1, rest2);
