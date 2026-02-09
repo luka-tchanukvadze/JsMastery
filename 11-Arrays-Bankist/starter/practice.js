@@ -757,10 +757,24 @@ console.log('luka'.at(1));
 console.log('luka'[0]);
 
 // for (const movement of movements) {
-for (const [i, movement] of movements.entries()) {
+for (const movement of movements.entries()) {
   if (movement > 0) {
-    console.log(i + ' you deposited');
+    console.log(' you deposited');
   } else {
     console.log('you withdrew');
   }
 }
+
+console.log('----------------');
+
+// foreach
+movements.forEach((i, movement, arr) => {
+  if (movement > 0) {
+    // console.log(i + ' you deposited ' + typeof arr);
+    // console.log(arr + 'a');
+    console.log(movement);
+    // console.log(arr);
+  } else {
+    console.log('you withdrew');
+  }
+});
