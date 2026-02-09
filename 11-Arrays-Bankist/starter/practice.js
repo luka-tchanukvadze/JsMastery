@@ -638,74 +638,109 @@ const dogs = [
 GOOD LUCK 😀
 */
 
-const dogs = [
-  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
-  { weight: 8, curFood: 200, owners: ['Matilda'] },
-  { weight: 13, curFood: 275, owners: ['Sarah', 'John', 'Leo'] },
-  { weight: 18, curFood: 244, owners: ['Joe'] },
-  { weight: 32, curFood: 340, owners: ['Michael'] },
-];
+// const dogs = [
+//   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+//   { weight: 8, curFood: 200, owners: ['Matilda'] },
+//   { weight: 13, curFood: 275, owners: ['Sarah', 'John', 'Leo'] },
+//   { weight: 18, curFood: 244, owners: ['Joe'] },
+//   { weight: 32, curFood: 340, owners: ['Michael'] },
+// ];
 
-// 1
-dogs.forEach(dog => (dog.recFood = Math.floor(dog.weight ** 0.75 * 28)));
-console.log(dogs);
+// // 1
+// dogs.forEach(dog => (dog.recFood = Math.floor(dog.weight ** 0.75 * 28)));
+// console.log(dogs);
 
-// 2
-const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
-console.log(
-  `Sarah's dog eats too ${
-    dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'
-  }`
-);
+// // 2
+// const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+// console.log(
+//   `Sarah's dog eats too ${
+//     dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'
+//   }`
+// );
 
-// 3
-const ownersTooMuch = dogs
-  .filter(dog => dog.curFood > dog.recFood)
-  .flatMap(dog => dog.owners);
+// // 3
+// const ownersTooMuch = dogs
+//   .filter(dog => dog.curFood > dog.recFood)
+//   .flatMap(dog => dog.owners);
 
-const ownersTooLittle = dogs
-  .filter(dog => dog.curFood < dog.recFood)
-  .flatMap(dog => dog.owners);
+// const ownersTooLittle = dogs
+//   .filter(dog => dog.curFood < dog.recFood)
+//   .flatMap(dog => dog.owners);
 
-console.log(ownersTooMuch);
-console.log(ownersTooLittle);
+// console.log(ownersTooMuch);
+// console.log(ownersTooLittle);
 
-// 4
-console.log(`${ownersTooMuch.join(' and ')}'s dogs are eating too much`);
-console.log(`${ownersTooLittle.join(' and ')}'s dogs are eating too little`);
+// // 4
+// console.log(`${ownersTooMuch.join(' and ')}'s dogs are eating too much`);
+// console.log(`${ownersTooLittle.join(' and ')}'s dogs are eating too little`);
 
-// 5
-console.log(dogs.some(dog => dog.curFood === dog.recFood));
+// // 5
+// console.log(dogs.some(dog => dog.curFood === dog.recFood));
 
-// 6
-const checkEatingOkay = dog =>
-  dog.curFood < dog.recFood * 1.1 && dog.curFood > dog.recFood * 0.9;
+// // 6
+// const checkEatingOkay = dog =>
+//   dog.curFood < dog.recFood * 1.1 && dog.curFood > dog.recFood * 0.9;
 
-console.log(dogs.every(checkEatingOkay));
+// console.log(dogs.every(checkEatingOkay));
 
-// 7
-const dogsEatingOkay = dogs.filter(checkEatingOkay);
-console.log(dogsEatingOkay);
+// // 7
+// const dogsEatingOkay = dogs.filter(checkEatingOkay);
+// console.log(dogsEatingOkay);
 
-// 8
-const dogsGroupedByPortion = Object.groupBy(dogs, dog => {
-  if (dog.curFood > dog.recFood) {
-    return 'too much';
-  } else if (dog.curFood < dog.recFood) {
-    return 'too-little';
-  } else {
-    return 'exact';
-  }
-});
-console.log(dogsGroupedByPortion);
+// // 8
+// const dogsGroupedByPortion = Object.groupBy(dogs, dog => {
+//   if (dog.curFood > dog.recFood) {
+//     return 'too much';
+//   } else if (dog.curFood < dog.recFood) {
+//     return 'too-little';
+//   } else {
+//     return 'exact';
+//   }
+// });
+// console.log(dogsGroupedByPortion);
 
-// 9
-const dogsGroupedByOwners = Object.groupBy(
-  dogs,
-  dog => `${dog.owners.length}-owners`
-);
-console.log(dogsGroupedByOwners);
+// // 9
+// const dogsGroupedByOwners = Object.groupBy(
+//   dogs,
+//   dog => `${dog.owners.length}-owners`
+// );
+// console.log(dogsGroupedByOwners);
 
-// 10
-const dogsSorted = dogs.toSorted((a, b) => a.recFood - b.recFood);
-console.log(dogsSorted);
+// // 10
+// const dogsSorted = dogs.toSorted((a, b) => a.recFood - b.recFood);
+// console.log(dogsSorted);
+
+// practice
+
+let arr = ['a', 'b', 'c', 'c', 'e'];
+
+// // slice method
+console.log(arr.slice(1));
+console.log(arr.slice(0, 1));
+console.log(arr.slice(2, 1));
+console.log(arr.slice(1, -1));
+
+// // splice
+// // mutates original
+// console.log('---');
+// const spliced = arr.splice(1, 2);
+
+// console.log('a', spliced.splice(1, 2));
+// console.log(spliced);
+// console.log(arr);
+
+// // reverse
+// // mutates original
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse());
+console.log(arr2);
+
+console.log('---');
+
+// // concat
+console.log(arr.concat([2, 3, 4]));
+const letters = arr.concat(arr2);
+console.log(letters);
+
+// // join
+console.log(arr.join('-'));
