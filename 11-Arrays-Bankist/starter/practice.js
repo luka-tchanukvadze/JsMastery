@@ -712,35 +712,55 @@ GOOD LUCK 😀
 
 // practice
 
-let arr = ['a', 'b', 'c', 'c', 'e'];
+// let arr = ['a', 'b', 'c', 'c', 'e'];
 
-// // slice method
-console.log(arr.slice(1));
-console.log(arr.slice(0, 1));
-console.log(arr.slice(2, 1));
-console.log(arr.slice(1, -1));
+// // // slice method
+// console.log(arr.slice(1));
+// console.log(arr.slice(0, 1));
+// console.log(arr.slice(2, 1));
+// console.log(arr.slice(1, -1));
 
-// // splice
-// // mutates original
+// // // splice
+// // // mutates original
+// // console.log('---');
+// // const spliced = arr.splice(1, 2);
+
+// // console.log('a', spliced.splice(1, 2));
+// // console.log(spliced);
+// // console.log(arr);
+
+// // // reverse
+// // // mutates original
+// const arr2 = ['j', 'i', 'h', 'g', 'f'];
+// console.log(arr2.reverse());
+// console.log(arr2);
+
 // console.log('---');
-// const spliced = arr.splice(1, 2);
 
-// console.log('a', spliced.splice(1, 2));
-// console.log(spliced);
-// console.log(arr);
+// // // concat
+// console.log(arr.concat([2, 3, 4]));
+// const letters = arr.concat(arr2);
+// console.log(letters);
 
-// // reverse
-// // mutates original
-const arr2 = ['j', 'i', 'h', 'g', 'f'];
-console.log(arr2.reverse());
-console.log(arr2);
+// // // join
+// console.log(arr.join('-'));
 
-console.log('---');
+const arr = [23, 11, 13];
+console.log(arr[0]);
+console.log(arr.at(0));
 
-// // concat
-console.log(arr.concat([2, 3, 4]));
-const letters = arr.concat(arr2);
-console.log(letters);
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1));
 
-// // join
-console.log(arr.join('-'));
+console.log('luka'.at(1));
+console.log('luka'[0]);
+
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(i + ' you deposited');
+  } else {
+    console.log('you withdrew');
+  }
+}
