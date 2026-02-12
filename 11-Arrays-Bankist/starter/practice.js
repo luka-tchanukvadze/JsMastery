@@ -870,29 +870,47 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const calcAverageHumanAge = arr => {
-  const ages = arr
-    .map(age => {
-      return age <= 2 ? age * 2 : 16 + age * 4;
-    })
-    .filter(age => age >= 18)
-    .reduce((acc, cur, i, arr) => {
-      return acc + cur / arr.length;
-    }, 0);
+// const calcAverageHumanAge = arr => {
+//   const ages = arr
+//     .map(age => {
+//       return age <= 2 ? age * 2 : 16 + age * 4;
+//     })
+//     .filter(age => age >= 18)
+//     .reduce((acc, cur, i, arr) => {
+//       return acc + cur / arr.length;
+//     }, 0);
 
-  console.log(humanAge);
-};
+//   console.log(humanAge);
+// };
 
-const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
-console.log(avg1, avg2);
+// const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// console.log(avg1, avg2);
 
 /**
  *
- * sup up nested arrat
+ * sum up nested array
  */
 
-const sumNestedArray = arr => {};
+const sumNestedArray = arr => {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    console.log('number', arr[i]);
+    console.log('index', i);
+
+    if (Array.isArray(arr[i])) {
+      sum += sumNestedArray(arr[i]);
+    } else {
+      sum += arr[i];
+    }
+
+    console.log('sum', sum);
+    console.log('----');
+  }
+
+  return sum;
+};
 
 const numbers = [1, 2, [3, 4], [5, [6, 7]]];
 console.log(sumNestedArray(numbers)); // 28
