@@ -914,8 +914,18 @@ GOOD LUCK 😀
 // };
 
 // SOLUTION 2
+// const sumNestedArray = arr => {
+//   return arr.flat(Infinity).reduce((acc, cur) => acc + cur, 0);
+// };
+
+// SOLUTION 3
 const sumNestedArray = arr => {
-  return arr.flat(Infinity).reduce((acc, cur) => acc + cur, 0);
+  return arr.reduce((acc, cur) => {
+    if (Array.isArray(cur)) {
+      return acc + sumNestedArray(cur);
+    }
+    return acc + cur;
+  }, 0);
 };
 
 const numbers = [1, 2, [3, 4], [5, [6, 7]]];
