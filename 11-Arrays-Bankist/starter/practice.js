@@ -892,24 +892,30 @@ GOOD LUCK 😀
  * sum up nested array
  */
 
+// SOLUTION 1
+// const sumNestedArray = arr => {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log('number', arr[i]);
+//     console.log('index', i);
+
+//     if (Array.isArray(arr[i])) {
+//       sum += sumNestedArray(arr[i]);
+//     } else {
+//       sum += arr[i];
+//     }
+
+//     console.log('sum', sum);
+//     console.log('----');
+//   }
+
+//   return sum;
+// };
+
+// SOLUTION 2
 const sumNestedArray = arr => {
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    console.log('number', arr[i]);
-    console.log('index', i);
-
-    if (Array.isArray(arr[i])) {
-      sum += sumNestedArray(arr[i]);
-    } else {
-      sum += arr[i];
-    }
-
-    console.log('sum', sum);
-    console.log('----');
-  }
-
-  return sum;
+  return arr.flat(Infinity).reduce((acc, cur) => acc + cur, 0);
 };
 
 const numbers = [1, 2, [3, 4], [5, [6, 7]]];
