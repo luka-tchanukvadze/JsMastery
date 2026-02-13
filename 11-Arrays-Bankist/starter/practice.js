@@ -936,7 +936,12 @@ GOOD LUCK 😀
 // console.log(findsomething);
 
 // some and every
-const anyDeposit = movements.some(mov => mov > 1500);
-console.log(anyDeposit);
-const everyDeposit = movements.every(mov => mov > 1500);
-console.log(everyDeposit);
+// const anyDeposit = movements.some(mov => mov > 1500);
+// console.log(anyDeposit);
+// const everyDeposit = movements.every(mov => mov > 1500);
+// console.log(everyDeposit);
+
+const arr = [1, 2, [3, 4], [5, [6, [7]]]];
+// console.log(arr.flat());
+// console.log(arr.flat(2));
+console.log(arr.flat(Infinity));
