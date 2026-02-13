@@ -919,14 +919,18 @@ GOOD LUCK 😀
 // };
 
 // SOLUTION 3
-const sumNestedArray = arr => {
-  return arr.reduce((acc, cur) => {
-    if (Array.isArray(cur)) {
-      return acc + sumNestedArray(cur);
-    }
-    return acc + cur;
-  }, 0);
-};
+// const sumNestedArray = arr => {
+//   return arr.reduce((acc, cur) => {
+//     if (Array.isArray(cur)) {
+//       return acc + sumNestedArray(cur);
+//     }
+//     return acc + cur;
+//   }, 0);
+// };
 
-const numbers = [1, 2, [3, 4], [5, [6, 7]]];
-console.log(sumNestedArray(numbers)); // 28
+// const numbers = [1, 2, [3, 4], [5, [6, 7]]];
+// console.log(sumNestedArray(numbers)); // 28
+
+const arr = [5, 2, 4, 1, 15, 8, 3];
+const findsomething = arr.findIndex(item => item > 5);
+console.log(findsomething);
