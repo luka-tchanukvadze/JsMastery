@@ -931,6 +931,12 @@ GOOD LUCK 😀
 // const numbers = [1, 2, [3, 4], [5, [6, 7]]];
 // console.log(sumNestedArray(numbers)); // 28
 
-const arr = [5, 2, 4, 1, 15, 8, 3];
-const findsomething = arr.findIndex(item => item > 5);
-console.log(findsomething);
+// const arr = [5, 2, 4, 1, 15, 8, 3];
+// const findsomething = arr.findIndex(item => item > 5);
+// console.log(findsomething);
+
+// some and every
+const anyDeposit = movements.some(mov => mov > 1500);
+console.log(anyDeposit);
+const everyDeposit = movements.every(mov => mov > 1500);
+console.log(everyDeposit);
